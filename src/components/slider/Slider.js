@@ -6,7 +6,7 @@ import "./banner.css";
 
 export default function Banner() {
   const settings = {
-    dots: true,
+    dots: false,
     autoplay: true,
     arrows: true,
     infinite: true,

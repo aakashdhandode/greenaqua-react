@@ -25,36 +25,24 @@ export default function Downloads() {
             <Container>
                 <Row>
                     <Col sm={3}>
-                        {/* <div className='broucher-box'>
-                            <Image  src={require('../assets/images/clients/01.png')}/>
-                        </div> */}
                         <div className='work-pro text-center'>
                              <h2>Water Vending Machine</h2>
                             <Image  src={require('../assets/images/downbutton.jpg')}/>
                         </div>
                     </Col>
                     <Col sm={3}>
-                        {/* <div className='broucher-box'>
-                            <Image  src={require('../assets/images/clients/01.png')}/>
-                        </div> */}
                         <div className='work-pro text-center'>
                              <h2>Green Aqua Profile - 2016</h2>
                             <Image  src={require('../assets/images/downbutton.jpg')}/>
                         </div>
                     </Col>
                     <Col sm={3}>
-                        {/* <div className='broucher-box'>
-                            <Image  src={require('../assets/images/clients/01.png')}/>
-                        </div> */}
                         <div className='work-pro text-center'>
                              <h2>Commercial</h2>
                             <Image  src={require('../assets/images/downbutton.jpg')}/>
                         </div>
                     </Col>
                     <Col sm={3}>
-                        {/* <div className='broucher-box'>
-                            <Image  src={require('../assets/images/clients/01.png')}/>
-                        </div> */}
                         <div className='work-pro text-center'>
                              <h2>STP Brochure</h2>
                             <Image  src={require('../assets/images/downbutton.jpg')}/>

@@ -1,68 +1,24 @@
 import React from 'react';
 // import Banner from '../components/banner/Banner';
 import Slider from '../components/slider/Slider';
-import Products from '../components/productstab/Products';
+// import Products from '../components/productstab/Products';
 import StretgyCard from '../components/stretgycard/StretgyCard';
 import Homeclients from '../components/clientlogo/HomeClients';
 // import '../components/banner/Banner';
 import '../assets/css/main.css'
-import { Col, Container, Row, Image, Button, Form } from 'react-bootstrap';
+import { Col, Container, Row, Image, Button, Form, Tabs, Tab } from 'react-bootstrap';
 import homeabout from "../assets/images/homeabout.jpg";
-
-// import { Link } from "react-router-dom";
-
-
+import '../assets/css/product.css'
+import productone from "../assets/images/productone.jpg";
+import Producttwo from "../assets/images/producttwo.jpg";
+import Producttree from "../assets/images/producttree.jpg";
+import { Link } from 'react-router-dom';
 export default function Home() {
   return (
     <>
     
        {/* <Banner /> */}
        <Slider />
- 
-{/* 
-        <section>
-            <Container>
-                <Row xs={7} md={7} sm={7}>
-                    <Col className='text-center'>
-                        <div className='home-icon'>
-                            <img src="https://cdn.shopify.com/s/files/1/0566/8336/4539/files/icon1_1920x800.png?v=1636437608" alt="" className="" />
-                            <h5>Economy</h5>
-                        </div>
-                    </Col>
-                    <Col className='text-center'>
-                        <div className='home-icon'>
-                            <img src="https://cdn.shopify.com/s/files/1/0566/8336/4539/files/icon1_1920x800.png?v=1636437608" alt="" className="" />
-                            <h5>Economy</h5>
-                        </div>
-                    </Col>
-                    <Col className='text-center'>
-                        <div className='home-icon'>
-                            <img src="https://cdn.shopify.com/s/files/1/0566/8336/4539/files/icon1_1920x800.png?v=1636437608" alt="" className="" />
-                            <h5>Economy</h5>
-                        </div>
-                    </Col>
-                    <Col className='text-center'>
-                        <div className='home-icon'>
-                            <img src="https://cdn.shopify.com/s/files/1/0566/8336/4539/files/icon1_1920x800.png?v=1636437608" alt="" className="" />
-                            <h5>Economy</h5>
-                        </div>
-                    </Col>
-                    <Col className='text-center'>
-                        <div className='home-icon'>
-                            <img src="https://cdn.shopify.com/s/files/1/0566/8336/4539/files/icon1_1920x800.png?v=1636437608" alt="" className="" />
-                            <h5>Economy</h5>
-                        </div>
-                    </Col>
-                    <Col className='text-center'>
-                        <div className='home-icon'>
-                            <img src="https://cdn.shopify.com/s/files/1/0566/8336/4539/files/icon1_1920x800.png?v=1636437608" alt="" className="" />
-                            <h5>Economy</h5>
-                        </div>
-                    </Col>
-                </Row>
-            </Container>
-        </section> */}
-
        <section className='home-product-card'>
            <Container>
                <Row>
@@ -111,8 +67,180 @@ export default function Home() {
            </Container>
        </section>
        <section className='pt-4'>
-          <Products />
+          {/* <Products /> */}
+          <Container>
+            <div className='section-title text-center'>
+                <h1>Our Products</h1>
+                <p> With Esteemed Quality certifications from Water Quality and focus on Safety and Environment MAnagement Systems, Green Aqua is committed to maintain the highest standards for Health, Saftey and Environment.</p>
+            </div>
+            <div className='products-tabs'>
+                <Tabs defaultActiveKey="tabone" id="uncontrolled-tab-example" className="mb-3">
+                    <Tab eventKey="tabone" title="Wastewater Treatment">
+                        <Row>
+                            <Col sm={3}>
+                                <div className='home-tab-product-card'>
+                                <Image  src={require('../assets/images/productone.jpg')} alt="greenaqua"/>
+                                <h3>Sewage Water Treatment Plants</h3>
+                                <p>Green Aqua engaged in manufacturing, supplying and distributing Water RO Purifiers and Home 
+                                Softeners for Residential and Small Business users. </p>
+                                <Link to="/ProductDetails">More..</Link>
+                                </div>
+                            </Col>
+                            <Col sm={3}>
+                                <div className='home-tab-product-card'>
+                                <Image  src={require('../assets/images/producttwo.jpg')} alt="greenaqua"/>
+                                <h3>Packaged Sewage Treatment Plant</h3>
+                                <p>Green Aqua engaged in manufacturing, supplying and distributing Water RO Purifiers and Home 
+                                Softeners for Residential and Small Business users. </p>
+                                <Link to="/ProductDetails">More..</Link>
+                                </div>
+                            </Col>
+                            <Col sm={3}>
+                                <div className='home-tab-product-card'>
+                                <Image  src={require('../assets/images/producttwo.jpg')} alt="greenaqua"/>
+                                <h3>Effluent Treatment Plant</h3>
+                                <p>Green Aqua engaged in manufacturing, supplying and distributing Water RO Purifiers and Home 
+                                Softeners for Residential and Small Business users. </p>
+                                <Link to="/ProductDetails">More..</Link>
+                                </div>
+                            </Col>
+                            <Col sm={3}>
+                                <div className='home-tab-product-card'>
+                                <Image  src={require('../assets/images/producttree.jpg')} alt="greenaqua"/>
+                                <h3>Industrial Reverse Osmosis Plant</h3>
+                                <p>Green Aqua engaged in manufacturing, supplying and distributing Water RO Purifiers and Home 
+                                Softeners for Residential and Small Business users. </p>
+                                <Link to="/ProductDetails">More..</Link>
+                                </div>
+                            </Col>
+                        </Row>
+                    </Tab>
+
+
+                    <Tab eventKey="tabtwo" title="Industrial Water Solution">
+                    <Row>
+                        <Col sm={3}>
+                                <div className='home-tab-product-card'>
+                                <Image  src={require('../assets/images/productone.jpg')} alt="greenaqua"/>
+                                <h3>Reverse Osmosis</h3>
+                                <p>Green Aqua engaged in manufacturing, supplying and distributing Water RO Purifiers and Home 
+                                Softeners for Residential and Small Business users. </p>
+                                <Link to="/ProductDetails">More..</Link>
+                                </div>
+                            </Col>
+                            <Col sm={3}>
+                                <div className='home-tab-product-card'>
+                                <Image  src={require('../assets/images/productone.jpg')} alt="greenaqua"/>
+                                <h3>Softners</h3>
+                                <p>Green Aqua engaged in manufacturing, supplying and distributing Water RO Purifiers and Home 
+                                Softeners for Residential and Small Business users. </p>
+                                <Link to="/ProductDetails">More..</Link>
+                                </div>
+                            </Col>
+                            <Col sm={3}>
+                                <div className='home-tab-product-card'>
+                                <Image  src={require('../assets/images/productone.jpg')} alt="greenaqua"/>
+                                <h3>Multi Grade Sand Filter</h3>
+                                <p>Green Aqua engaged in manufacturing, supplying and distributing Water RO Purifiers and Home 
+                                Softeners for Residential and Small Business users. </p>
+                                <Link to="/ProductDetails">More..</Link>
+                                </div>
+                            </Col>
+                            <Col sm={3}>
+                                <div className='home-tab-product-card'>
+                                <Image  src={require('../assets/images/productone.jpg')} alt="greenaqua"/>
+                                <h3>Activated Corbon Filter</h3>
+                                <p>Green Aqua engaged in manufacturing, supplying and distributing Water RO Purifiers and Home 
+                                Softeners for Residential and Small Business users. </p>
+                                <Link to="/ProductDetails">More..</Link>
+                                </div>
+                            </Col>
+                    </Row>
+                    </Tab>
+
+
+
+                    <Tab eventKey="tabthree" title="Water Vending Machine">
+                    <Row>
+                    <Col sm={3}>
+                                <div className='home-tab-product-card'>
+                                <img src={Producttwo} className="img-fluid" alt="greenaqua" />
+                                <h3>Water Vending Machine</h3>
+                                <p>Green Aqua engaged in manufacturing, supplying and distributing Water RO Purifiers and Home 
+                                Softeners for Residential and Small Business users. </p>
+                                <Link to="/ProductDetails">More..</Link>
+                                </div>
+                            </Col>
+                    </Row>
+                    </Tab>
+                    <Tab eventKey="tabfour" title="Water Vending Station">
+                    <Row>
+                        <Col sm={3}>
+                                <div className='home-tab-product-card'>
+                                <img src={Producttwo} className="img-fluid" alt="greenaqua" />
+                                <h3>Water Vending Station</h3>
+                                <p>Green Aqua engaged in manufacturing, supplying and distributing Water RO Purifiers and Home 
+                                Softeners for Residential and Small Business users. </p>
+                                <Link to="/ProductDetails">More..</Link>
+                                </div>
+                            </Col>
+                    </Row>
+                    </Tab>
+
+                    <Tab eventKey="tabfive" title="Domestic & Industrial">
+                    <Row>
+                            <Col sm={3}>
+                                <div className='home-tab-product-card'>
+                                <img src={Producttwo} className="img-fluid" alt="greenaqua" />
+                                <h3>RO Purifiers</h3>
+                                <p>Green Aqua engaged in manufacturing, supplying and distributing Water RO Purifiers and Home 
+                                Softeners for Residential and Small Business users. </p>
+                                <Link to="/ProductDetails">More..</Link>
+                                </div>
+                            </Col>
+                            <Col sm={3}>
+                                <div className='home-tab-product-card'>
+                                <img src={Producttwo} className="img-fluid" alt="greenaqua" />
+                                <h3>Home Softner</h3>
+                                <p>Green Aqua engaged in manufacturing, supplying and distributing Water RO Purifiers and Home 
+                                Softeners for Residential and Small Business users. </p>
+                                <Link to="/ProductDetails">More..</Link>
+                                </div>
+                            </Col>
+                    </Row>
+                    </Tab>
+
+                    <Tab eventKey="tabsix" title="Dringking Water Solution">
+                    <Row>
+                            <Col sm={3}>
+                                <div className='home-tab-product-card'>
+                                <img src={Producttwo} className="img-fluid" alt="greenaqua" />
+                                <h3>Turnkey Packaged Water</h3>
+                                <p>Green Aqua engaged in manufacturing, supplying and distributing Water RO Purifiers and Home 
+                                Softeners for Residential and Small Business users. </p>
+                                <Link to="/ProductDetails">More..</Link>
+                                </div>
+                            </Col>
+                            <Col sm={3}>
+                                <div className='home-tab-product-card'>
+                                <img src={Producttwo} className="img-fluid" alt="greenaqua" />
+                                <h3>RO Drinking Water Plants</h3>
+                                <p>Green Aqua engaged in manufacturing, supplying and distributing Water RO Purifiers and Home 
+                                Softeners for Residential and Small Business users. </p>
+                                <Link to="/ProductDetails">More..</Link>
+                                </div>
+                            </Col>
+                    </Row>
+                    </Tab>
+                </Tabs>
+            </div>
+        </Container>
        </section>
+
+
+
+
+
        <section className='pt-4'>
           <StretgyCard />
        </section>
