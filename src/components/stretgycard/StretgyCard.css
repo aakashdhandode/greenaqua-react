@@ -1,0 +1,56 @@
+.green-module {
+  width: 100%;
+  height: 350px;
+  position: relative;
+  padding: 78px 82px 9px;
+  color: white;
+  }
+  .green-module i{
+    font-size: 50px;
+  }
+  .desgin-img{
+    background: linear-gradient(rgba(0,51,116,.9),rgba(0,52,94,0.7)),
+    url(../../assets/images/design.jpg);
+    background-size: cover;
+  }
+  .build-img{
+    background: 
+    linear-gradient(
+      rgba(0,75,103,0.7),
+      rgba(0,43,104,0.7)
+    ),
+    url(../../assets/images/build.jpg);
+    background-size: cover;
+  }
+  .support-img{
+    background: 
+    linear-gradient(
+      rgba(0,92,108,0.6),
+      rgba(191,204,220,.9)
+    ),
+    url(../../assets/images/support.jpg);
+    background-size: cover;
+  }
+  
+  
+  /* .mid h2 {
+    font-weight: 900;
+    color: white;
+    text-transform: uppercase;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 2rem;
+    transform: translate(-50%, -50%);
+  } */
+  .home-green-cards  .col-sm-4{
+    padding: 0!important;
+  }
+.green-module p{
+    font-size: 16px;
+    font-weight: 500;
+}
+.green-module h4{
+    padding: 16px 0 0 0;
+}

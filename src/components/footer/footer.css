@@ -1,0 +1,247 @@
+footer{
+    background: #000d42;
+    padding: 57px 0 32px;
+}
+.footer-logo img {
+    height: 55px;
+}
+.footer-logo p {
+    font-size: 15px;
+    color: white;
+    margin: 15px 0 0 0;
+    padding: 0 64px 0 0;
+}
+.footer-content-item {
+    margin-bottom: 20px;
+}
+.footer-content-title h3 {
+    font-size: 19px;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.footer-details {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+.footer-details ul li{
+        padding: 7px 0;
+        display: flex;
+        align-items: center;
+}
+.footer-details  li i {
+    padding-right: 6px;
+    color: white;
+    font-size: 11px;
+    line-height: 1px;
+}
+.footer-list {
+    padding-left: 0;
+    padding-right: 0;
+}
+.footer-list li {
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 5px;
+    position: relative;
+    list-style: none;
+}
+.footer-list li a {
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+    transition: all .3s linear;
+}
+.footer-content-list a {
+    color: white;
+}
+.footer-content-list p {
+    color: white;
+    margin: 0;
+    line-height: 21px;
+    font-size: 15px;
+}
+a{
+    text-decoration: none;
+}
+.footer-address-info-item{
+    padding: 0 0 7px 0;
+}
+.footer-social-icons a{
+    padding: 0 3px 0px;
+}
+.footer-social-icons a i{
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 31.5px;
+    border-radius: 3px;
+    font-size: 16px;
+}
+.footer-social-icons .fa-twitter {
+    background: #55acee;
+    color: #fff;
+}
+.footer-social-icons .fa-instagram {
+    background: #125688;
+    color: #fff;
+}
+.footer-social-icons .fa-facebook-f {
+    background: #3b5998;
+    color: #fff;
+}
+.footer-social-icons .fa-linkedin {
+    background: #007bb5;
+    color: #fff;
+}
+.footer-social-icons .fa-youtube {
+    background: #b00;
+    color: #fff;
+}
+.copywrite{
+    background-color: #000d42;
+}
+.footer-bottom {
+    border-top: 1px solid #333;
+}
+.copywrite p{
+    margin: 0;
+    padding: 8px;
+    font-size: 14px;
+}
+
+.wf-pop {
+	position: fixed;	right:22px;
+	bottom:130px;
+	-webkit-animation: pops 6s ease-in-out infinite;
+	-moz-animation: pops 6s ease-in-out infinite;
+	-o-animation: pops 6s ease-in-out infinite;
+	animation: pops 6s ease-in-out infinite;
+	z-index: 99999 !important;
+	float:right;
+    cursor: pointer;
+}
+.wf-pop a {
+	display: block;
+}
+.wf-pop img {
+	width: 80px;
+	height:125px;
+}
+@-webkit-keyframes pops {
+ 0%, 100% {
+-webkit-transform:translateY(0);
+}
+ 30% {
+-webkit-transform:translateY(-150px);
+}
+ 40% {
+-webkit-transform:translateY(-95px);
+}
+ 50% {
+-webkit-transform:translateY(-150px);
+}
+ 60% {
+-webkit-transform:translateY(-95px);
+}
+ 70% {
+-webkit-transform:translateY(-150px);
+}
+ 80% {
+-webkit-transform:translateY(-95px);
+}
+}
+@-moz-keyframes pops {
+ 0%, 100% {
+-moz-transform:translateY(0);
+}
+ 30% {
+-moz-transform:translateY(-150px);
+}
+ 40% {
+-moz-transform:translateY(-95px);
+}
+ 50% {
+-moz-transform:translateY(-150px);
+}
+ 60% {
+-moz-transform:translateY(-95px);
+}
+ 70% {
+-moz-transform:translateY(-150px);
+}
+ 80% {
+-moz-transform:translateY(-95px);
+}
+}
+@-o-keyframes pops {
+ 0%, 100% {
+-o-transform:translateY(0);
+}
+ 30% {
+-o-transform:translateY(-150px);
+}
+ 40% {
+-o-transform:translateY(-95px);
+}
+ 50% {
+-o-transform:translateY(-150px);
+}
+ 60% {
+-o-transform:translateY(-95px);
+}
+ 70% {
+-o-transform:translateY(-150px);
+}
+ 80% {
+-o-transform:translateY(-95px);
+}
+}
+@keyframes pops {
+ 0%, 100% {
+transform:translateY(0);
+}
+ 30% {
+transform:translateY(-150px);
+}
+ 40% {
+transform:translateY(-95px);
+}
+ 50% {
+transform:translateY(-150px);
+}
+ 60% {
+transform:translateY(-95px);
+}
+ 70% {
+transform:translateY(-150px);
+}
+  80% { 
+transform:translateY(-95px);
+}
+}
+
+.follow-whatsapp {
+    height: 50px;
+    width: 50px;
+    background: #2dc100;
+    position: fixed;
+    z-index: 1;
+    bottom: 3%;
+    left: 26px;
+    border-radius: 50%;
+    line-height: 60px;
+    text-align: center;
+    -webkit-box-shadow: 3px 3px 12px 0px rgba(168, 79, 79, 0.72);
+    -moz-box-shadow: 3px 3px 12px 0px rgba(51, 51, 51, 0.72);
+    box-shadow: 3px 3px 12px 0px rgb(51 51 51 / 72%);
+}
+.follow-whatsapp .fa-whatsapp {
+    text-align: center;
+    color: #fff;
+    font-size: 29px;
+    line-height: 50px;
+}
+
+

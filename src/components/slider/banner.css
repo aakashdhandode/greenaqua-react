@@ -1,0 +1,53 @@
+.banner-slider{
+    height: 85vh;
+    width: 100%;
+    position: relative;
+   
+}
+
+.banner-img{
+    height: 100%!important;
+    position: relative;
+}
+.banner-img img{
+    height: 100%;
+    width: 100%;
+}
+.banner-content{
+    position: absolute;
+    height: 84vh;
+    width: 100%;
+    z-index: 20;
+    top: 0px;
+    /* background-color: red; */
+    padding-top: 15%;
+}
+.banner-content h1{
+    color: #fff;
+}
+.banner-content p{
+    color: #fff;
+    font-size: 18px;
+}
+.main-slider .slick-next {
+    right: 22px!important;
+}
+.main-slider .slick-prev{
+    left: 15px!important;
+    z-index: 1;
+   
+}
+
+.main-slider .slick-dots li.slick-active button:before {
+    opacity: .75;
+    color: #FF5923;
+}
+.main-slider .slick-dots li button:before {
+    font-size: 11px;
+    line-height: 12px;
+    height: 17px;
+    color: #c4c4c4;
+}
+.main-slider .slick-dots li {
+    margin: 0 2px;
+}
