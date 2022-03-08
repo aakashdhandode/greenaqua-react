@@ -2,7 +2,8 @@ import React from 'react';
 import { Col, Container, Row,Image } from 'react-bootstrap';
 import Homeclients from '../components/clientlogo/HomeClients';
 import { Link } from "react-router-dom";
-
+import Brouchers from '../components/brouchers/Brouchers';
+import Brouchersimg from '../assets/images/f2.png';
 export default function Downloads() {
   return (
     <>
@@ -25,29 +26,36 @@ export default function Downloads() {
             <Container>
                 <Row>
                     <Col sm={3}>
-                        <div className='work-pro text-center'>
-                             <h2>Water Vending Machine</h2>
-                            <Image  src={require('../assets/images/downbutton.jpg')}/>
-                        </div>
+                       <Brouchers
+                        title="Water Vending Machine"
+                        img={Brouchersimg}
+                       />
                     </Col>
                     <Col sm={3}>
-                        <div className='work-pro text-center'>
-                             <h2>Green Aqua Profile - 2016</h2>
-                            <Image  src={require('../assets/images/downbutton.jpg')}/>
-                        </div>
+                       <Brouchers
+                        title="Water Vending Machine"
+                        img={Brouchersimg}
+                       />
                     </Col>
                     <Col sm={3}>
-                        <div className='work-pro text-center'>
-                             <h2>Commercial</h2>
-                            <Image  src={require('../assets/images/downbutton.jpg')}/>
-                        </div>
+                       <Brouchers
+                        title="Water Vending Machine"
+                        img={Brouchersimg}
+                       />
                     </Col>
                     <Col sm={3}>
-                        <div className='work-pro text-center'>
-                             <h2>STP Brochure</h2>
-                            <Image  src={require('../assets/images/downbutton.jpg')}/>
-                        </div>
+                       <Brouchers
+                        title="Water Vending Machine"
+                        img={Brouchersimg}
+                       />
                     </Col>
+                    <Col sm={3}>
+                       <Brouchers
+                        title="Water Vending Machine"
+                        img={Brouchersimg}
+                       />
+                    </Col>
+                   
                 </Row>
             </Container>
         </section>
