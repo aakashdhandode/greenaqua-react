@@ -2,6 +2,8 @@ import React from 'react';
 import { Col, Container, Row, Image} from 'react-bootstrap';
 // import Homeclients from '../components/clientlogo/HomeClients';
 import { Link } from "react-router-dom";
+import OurClient from '../components/clientlogo/OurClient';
+import Brouchersimg from '../assets/images/clients/01.png';
 
 export default function Clients() {
   return (
@@ -24,12 +26,58 @@ export default function Clients() {
 
         <section className='clients-bg'>
            <Container>
-                {/* <div className='section-title text-center'>
-                    <h1>Our Clients</h1>
-                    <p> With Esteemed Quality certifications from Water Quality and focus on Safety and Environment MAnagement Systems, Green Aqua is committed to maintain the highest standards for Health, Saftey and Environment.</p>
-                </div> */}
                <Row className='pt-3'>
                    <Col sm={2} xs={6}>
+                      <OurClient
+                          img={Brouchersimg}
+                       />
+                   </Col>
+                   <Col sm={2} xs={6}>
+                      <OurClient
+                          img={Brouchersimg}
+                       />
+                   </Col>
+                   <Col sm={2} xs={6}>
+                      <OurClient
+                          img={Brouchersimg}
+                       />
+                   </Col>
+                   <Col sm={2} xs={6}>
+                      <OurClient
+                          img={Brouchersimg}
+                       />
+                   </Col>
+                   <Col sm={2} xs={6}>
+                      <OurClient
+                          img={Brouchersimg}
+                       />
+                   </Col>
+                   <Col sm={2} xs={6}>
+                      <OurClient
+                          img={Brouchersimg}
+                       />
+                   </Col>
+                   <Col sm={2} xs={6}>
+                      <OurClient
+                          img={Brouchersimg}
+                       />
+                   </Col>
+                   <Col sm={2} xs={6}>
+                      <OurClient
+                          img={Brouchersimg}
+                       />
+                   </Col>
+                   <Col sm={2} xs={6}>
+                      <OurClient
+                          img={Brouchersimg}
+                       />
+                   </Col>
+                   
+
+
+
+
+                  {/*  <Col sm={2} xs={6}>
                      <div className='clentslogo-card'>
                          <Image  src={require('../assets/images/clients/01.png')}/>
                       </div>
@@ -275,7 +323,7 @@ export default function Clients() {
                      <div className='clentslogo-card'>
                          <Image  src={require('../assets/images/clients/50.png')}/>
                        </div>
-                   </Col>
+                   </Col> */}
                </Row>
              
          

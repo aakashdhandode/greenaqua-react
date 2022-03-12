@@ -126,8 +126,8 @@ a{
 	display: block;
 }
 .wf-pop img {
-	width: 80px;
-	height:125px;
+    width: 119px;
+    height: 107px;
 }
 @-webkit-keyframes pops {
  0%, 100% {
@@ -221,27 +221,93 @@ transform:translateY(-150px);
 transform:translateY(-95px);
 }
 }
-
 .follow-whatsapp {
     height: 50px;
     width: 50px;
     background: #2dc100;
     position: fixed;
     z-index: 1;
-    bottom: 3%;
-    left: 26px;
+    bottom: 25%;
+    left: 30px;
     border-radius: 50%;
     line-height: 60px;
     text-align: center;
-    -webkit-box-shadow: 3px 3px 12px 0px rgba(168, 79, 79, 0.72);
+    -webkit-box-shadow: 3px 3px 12px 0px rgb(51 51 51 / 72%);
     -moz-box-shadow: 3px 3px 12px 0px rgba(51, 51, 51, 0.72);
     box-shadow: 3px 3px 12px 0px rgb(51 51 51 / 72%);
 }
 .follow-whatsapp .fa-whatsapp {
     text-align: center;
     color: #fff;
-    font-size: 29px;
+    font-size: 25px;
     line-height: 50px;
 }
 
-
+.follow-facebook {
+    height: 50px;
+    width: 50px;
+    background: #1877f2;
+    position: fixed;
+    z-index: 1;
+    bottom: 15%;
+    left: 30px;
+  
+    border-radius: 50%;
+    line-height: 60px;
+    text-align: center;
+    -webkit-box-shadow: 3px 3px 12px 0px rgb(51 51 51 / 72%);
+    -moz-box-shadow: 3px 3px 12px 0px rgba(51, 51, 51, 0.72);
+    box-shadow: 3px 3px 12px 0px rgb(51 51 51 / 72%);
+}
+.follow-facebook .fa-phone {
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+    line-height: 50px;
+}
+.follow-instagram {
+    height: 50px;
+    width: 50px;
+    background: orange;
+    position: fixed;
+    z-index: 1;
+    bottom: 5%;
+    left: 30px;
+    border-radius: 50%;
+    line-height: 60px;
+    text-align: center;
+    -webkit-box-shadow: 3px 3px 12px 0px rgb(51 51 51 / 72%);
+    -moz-box-shadow: 3px 3px 12px 0px rgba(51, 51, 51, 0.72);
+    box-shadow: 3px 3px 12px 0px rgb(51 51 51 / 72%);
+}
+.follow-instagram .fa-envelope {
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+    line-height: 50px;
+}
+.pop-up .modal-header {
+    border-bottom: none!important;
+    padding: 15px 20px 0px!important;
+   
+}
+.pop-up .modal-title {
+    margin-bottom: 0;
+    line-height: 1.5;
+    font-size: 20px;
+    font-weight: 600;
+    color: #1d4c9f;
+}
+.pop-up .input-feild-height {
+    height: 40px!important;
+    margin: 0 0 7px 0;
+    font-size: 14px;
+}
+.pop-up .btn-theme-colored {
+    font-weight: 500!important;
+    background-image: -webkit-linear-gradient( 0deg, rgb(13,34,52) 0%, rgb(13,77,132) 100%)!important;
+    color: white;
+    margin: 15px 0 0 0;
+    padding: 6px 33px;
+    font-size: 14px;
+}

@@ -1,6 +1,17 @@
 body{
     font-family: 'Source Sans Pro', sans-serif;
 }
+html, body{
+    max-width: 100vw!important;
+    width: 100vw!important;
+    overflow-x: hidden!important;
+    margin: 0!important;
+    height: 100%;
+    width: 100%;
+    overflow-y: auto!important;
+    overflow-x: hidden!important;
+    position: absolute!important;
+}
 .home-product-card img {
     width: 100%;
     height: 208px;
@@ -134,7 +145,7 @@ body{
 }
 .product-page-sub {
     background-color: #f2f6ff;
-    padding: 41px 0 13px;
+    padding: 58px 0 13px;
 }
 .pro-discription h3 {
     color: #000d42;
@@ -407,9 +418,10 @@ body{
     padding: 8px 0 1px;
 }
 .descriptions-details p {
-    font-size: 17px;
+    font-size: 15.5px;
     line-height: 22px;
     color: black;
+    text-align: justify;
 }
 .details-title {
     padding: 5px 0 5px;
@@ -549,7 +561,7 @@ body{
 }
 .navbar-toggler {
     padding: 0.25rem 0.75rem;
-    font-size: 1.25rem;
+    font-size: 11px;
     line-height: 1;
     background-color: #efefef!important;
     border: 1px solid transparent;
@@ -559,7 +571,7 @@ body{
 
 
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 600px) {
     .new-about-bg .offers-containt {
         padding: 36px 9px 0px 9px;
     }
@@ -569,8 +581,8 @@ body{
     }
     .name-mail a {
         color: white;
-        padding: 0 15px 0px 0px;
-        font-size: 15px;
+        padding: 0 12px 0px 0px;
+        font-size: 11.6px;
     }
     .top-header {
         height: 54px;
@@ -593,7 +605,95 @@ body{
         height: 39vh;
     }
     .offers-containt h3 {
-        font-size: 22px;
-        line-height: 28px;
+        font-size: 19px!important;
+        line-height: 23px!important;
     }
+    .section-title4 h2{
+        font-size: 22px!important;
+        line-height: 28px!important;
+    }
+    .products-tabs .nav-link{
+    padding: 4px 10px!important;
+    color: black;
+    font-size: 14px!important;
+    margin: 3px 7px 3px 0!important;
+    border: 1px solid #1d4c9f57;
+    width: 174px;
+    }
+    .home-product-card {
+        padding: 10px 0 44px 0;
+    }
+    .footer-contact {
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 18px 0 0;
+      }
+      .sevice-icons h1 {
+        font-size: 16px;
+        padding: 4px 0 6px 0;
+    }
+    .icon-image {
+        width: 36px;
+        margin: 16px 0 1px 0;
+    }
+    .footer-section-containt h1 {
+        font-size: 18px;
+    }
+    .mobile-side-padding {
+        padding: 0 0 0 26px;
+    }
+    .footer-contact .container {
+        padding-top: 2px;
+        padding-bottom: 30px;
+    }
+    .footer-number {
+        margin-top: 14px;
+        padding: 0 0 0 26px;
+    }
+    .get-started-btn {
+        padding: 12px 15px;
+        font-size: 14px;
+        font-weight: 700;
+    }
+    .pro-discription h3 {
+        color: #000d42;
+    }
+    .pro-discription p {
+        font-size: 14px;
+    }
+    .pro-discription{
+        padding: 23px 0 3px;
+    }
+    .main-service-box {
+        padding-top: 4px;
+        padding-bottom: 51px;
+    }
+    .service-containt-img {
+        margin: 0 0 25px 0;
+    }
+    .count-text p {
+        font-size: 12px;
+    }
+    .count-text h3 {
+        font-size: 22px;
+    }
+    .wf-pop img {
+        width: 80px;
+        height: 80px;
+    }
+    .social-icons a {
+        padding: 0 15px 0 0;
+        color: white;
+        font-size: 12px;
+    }
+    .top-header .social-icons{
+        text-align: center!important;
+    }
+    .new-about-bg .offers-containt p {
+        font-size: 12px;
+    }
+}
+.top-header .social-icons{
+    text-align: end;
+
 }

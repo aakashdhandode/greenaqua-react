@@ -9,19 +9,17 @@ import Services from './view/Services';
 import Gallery from './view/Gallery';
 import Contact from './view/Contact';
 import Clients from './view/Clients';
-import SubCategories from './view/SubCategories';
 import ProductDetails from './view/ProductDetails';
 import Downloads from './view/Downloads';
 import Products from './view/Products';
+import ProductCategories from './view/ProductCategories';
 
 
 class App extends Component {
   render() {
     return (
       <div>
-          {/* <Header />
-          <Home />
-          <Footer /> */}
+       
           <Router basename={"/greenaqua"}>
           <div>
             <Header />
@@ -32,7 +30,7 @@ class App extends Component {
               <Route exact path="/Clients" component={Clients} />
               <Route exact path="/Gallery" component={Gallery} />
               <Route exact path="/Products" component={Products} />
-              <Route exact path="/SubCategories" component={SubCategories} />
+              <Route exact path="/ProductCategories" component={ProductCategories} />
               <Route exact path="/ProductDetails" component={ProductDetails} />
               <Route exact path="/Downloads" component={Downloads} />
               <Route exact path="/Contact" component={Contact} />
