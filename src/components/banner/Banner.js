@@ -6,7 +6,6 @@ export default function Banner() {
   return (
     <>
         <section>
-           {/* <Image  src={require('../../assets/images/banner.jpg').default}/> */}
            <img src={sliderone} className="img-fluid banner-img-style" alt="sap" />
         </section>
     </>

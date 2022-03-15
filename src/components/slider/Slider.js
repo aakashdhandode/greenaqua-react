@@ -1,12 +1,27 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { Image } from 'react-bootstrap';
 import Slider from "react-slick";
-import banner1 from "../../assets/images/banner/uu.jpg";
-import banner2 from "../../assets/images/cslide2.jpg";
 import "./banner.css";
+import axios from 'axios';
 
 export default function Banner() {
+  const [banner, setBanner] = useState([]);
+  useEffect(() => {
+  fetchBanner();
+  }, []);
+  const fetchBanner = () => {
+  axios
+      .get('http://127.0.0.1:8000/api/ga/banners')
+      .then((res) => {
+      console.log(res);
+      setBanner(res.data.data);
+      })
+      .catch((err) => {
+      console.log(err);
+      });
+  };
   const settings = {
-    dots: false,
+    dots: true,
     autoplay: true,
     arrows: true,
     infinite: true,
@@ -17,19 +32,15 @@ export default function Banner() {
   return (
     <>
     <section className="main-slider ">
-     <Slider {...settings}>
-          <div className="banner-slider">
-            <div className="banner-img">
-              <img src={banner1} className="img-fluid" alt="sap" />
-            </div>          
-        </div>
-       
-          <div className="banner-slider">
-            <div className="banner-img">
-              <img src={banner2} className="img-fluid" alt="sap" />
-            </div>
-          </div>
-      </Slider>
+        <Slider {...settings}>
+                    {banner.map((image) => (
+                        <div className="banner-slider">
+                            <div className="banner-img">
+                               <img src={'http://127.0.0.1:8000/'+image.thumb} alt='greenAqua' />
+                             </div>
+                        </div>
+                        ))}
+          </Slider>
       </section>
     </>
   );

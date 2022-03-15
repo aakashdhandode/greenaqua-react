@@ -1,10 +1,27 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Col, Container, Row,Image } from 'react-bootstrap';
 import { Link } from "react-router-dom";
 import Brouchers from '../components/brouchers/Brouchers';
 import Brouchersimg from '../assets/images/downbutton.jpg';
 import ClientSlider from '../components/clientlogo/ClientSlider';
+import axios from 'axios';
 export default function Downloads() {
+    const [downloads, setDownloads] = useState([]);
+    useEffect(() => {
+    fetchGallery();
+    }, []);
+    const fetchGallery = () => {
+    axios
+        .get('http://127.0.0.1:8000/api/ga/files/broucher/true')
+        .then((res) => {
+        console.log(res);
+        setDownloads(res.data.data);
+        })
+        .catch((err) => {
+        console.log(err);
+        });
+    };
+
   return (
     <>
         <section className='product-page-sub'>
@@ -18,7 +35,17 @@ export default function Downloads() {
         <section className='downloads-padding'>
             <Container>
                 <Row>
+                {downloads.map((broucher) => (
                     <Col sm={3}>
+                    <div className="work-pro text-center">
+                      <a href={'http://127.0.0.1:8000/'+broucher.original} download target="_blank">
+                          <h2>{broucher.name}</h2>
+                          <Image  src={require('../assets/images/downbutton.jpg')} />
+                       </a>
+                    </div>
+                    </Col>
+                    ))}
+                    {/* <Col sm={3}>
                        <Brouchers
                         title="Water Vending Machine"
                         img={Brouchersimg}
@@ -41,7 +68,7 @@ export default function Downloads() {
                         title="Water Vending Machine"
                         img={Brouchersimg}
                        />
-                    </Col>                 
+                    </Col>                  */}
                 </Row>
             </Container>
         </section>

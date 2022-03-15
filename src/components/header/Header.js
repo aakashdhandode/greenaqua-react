@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from 'react';
 import { Container, Navbar, Nav, Col, Row, Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import logo from "../../assets/images/logo.jpg";
@@ -7,6 +7,21 @@ import "./header.css";
 export default function Header() {
   // const [showDropdown, setShowDropd  own] = useState(false);
   const [active, setActive] = useState("home");
+
+  const [headerLink, setHeaderCatLink] = useState([]);
+  const getHeaderCat = async () => {
+    fetch('http://127.0.0.1:8000/api/ga/categories')
+      .then((response)  =>  response.json())
+      .then((response)  =>  {
+        setHeaderCatLink(response.data); 
+      }).catch((err)  =>  {
+        console.log(err.message);
+      })
+}
+
+useEffect(() =>{
+    getHeaderCat();
+}, []);
   return (
     <>
       <div className="top-header">
@@ -31,70 +46,6 @@ export default function Header() {
         </Container>
       </div>
 
-      {/* <Navbar expand="md" className="transparent-header">
-        <Container className='header-white'>
-            <Navbar.Brand>
-              <Link to="/">
-                 <img src={logo} className="img-fluid logo-img" alt="logo" />
-              </Link>
-            </Navbar.Brand>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ms-auto">
-                <Nav.Link>
-                  <Link to="/">Home</Link>
-                </Nav.Link>
-                <Nav.Link>
-                  <Link to="/about">About Us</Link>
-                </Nav.Link>
-                <Nav.Link>
-                  <Link to="/services">Services</Link>
-                </Nav.Link>
-                  <Nav.Link>
-                  <ul className="dropdown">
-                    <li><Link to="/products">Products</Link>
-                        <ul className="dropdown-chaild">
-                           <li><Link to="/ProductCategories">Wastewater Treatment</Link>
-                                <ul>
-                                    <li><Link to="/ProductDetails">Sewage Treatment plants</Link></li>
-                                    <li><Link to="/ProductDetails">Packages STP</Link></li>
-                                    <li><Link to="/ProductDetails">Effluent Treatment Plants</Link></li>
-                                    <li><Link to="/ProductDetails">Packages ETP</Link></li>
-                                </ul>
-                            </li>
-                            <li><Link to="/ProductCategories">Industrial Water Solutions </Link>
-                                <ul>
-                                    <li><Link to="/ProductDetails">Sewage Treatment plants</Link></li>
-                                    <li><Link to="/ProductDetails">Packages STP</Link></li>
-                                    <li><Link to="/ProductDetails">Effluent Treatment Plants</Link></li>
-                                    <li><Link to="/ProductDetails">Packages ETP</Link></li>
-                                </ul>
-                            </li>
-                            <li><Link to="/ProductCategories">Domestic & Industrial </Link></li>
-                            <li><Link to="/ProductCategories">Drinking Water Solutions</Link></li>
-                            <li><Link to="/ProductCategories">Water Vending Machine</Link></li>
-                            <li><Link to="/ProductCategories">Water Vending Station</Link></li>
-                        </ul>
-                    </li>
-                </ul>
-                </Nav.Link>
-                <Nav.Link>
-                  <Link to="/clients">Clients</Link>
-                </Nav.Link>
-                <Nav.Link>
-                  <Link to="/gallery">Gallery</Link>
-                </Nav.Link>
-                <Nav.Link>
-                  <Link to="/downloads">Brouchers</Link>
-                </Nav.Link>
-                <Nav.Link>
-                  <Link to="/contact">Contact Us</Link>
-                </Nav.Link>
-              </Nav>
-            </Navbar.Collapse>
-        </Container>
-  </Navbar> */}
-
       <section className="logo-section-header">
         <Container>
           <Row>
@@ -113,83 +64,6 @@ export default function Header() {
           </Row>
         </Container>
       </section>
-      {/* <section>
-        <Navbar bg="light" collapseOnSelect expand="lg">
-          <Container>
-
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
-              <Nav
-                className="ms-auto sub-nav"
-                activeKey={active}
-                onSelect={(selectedKey) => setActive(selectedKey)}
-              >
-                <Nav.Item>
-                  <Nav.Link eventKey="home" as={Link} to="/">
-                    Home
-                  </Nav.Link>
-                </Nav.Item>
-
-                <Nav.Item>
-                  <Nav.Link eventKey="about" as={Link} to="/about">
-                    About Us
-                  </Nav.Link>
-                </Nav.Item>
-               
-                <Nav.Link>
-                  <ul className="dropdown">
-                    <li>
-                      <Link to="/products">Products</Link>
-                      <Nav.Link eventKey="ServicesPage" as={Link} to="/ServicesPage">
-                  Services
-                </Nav.Link>
-                      <ul className="dropdown-chaild">
-                        <li><Link to="/ProductCategories">Wastewater Treatment</Link>
-                          <ul>
-                            <li><Link to="/ProductDetails">Sewage Treatment plants</Link></li>
-                            <li><Link to="/ProductDetails">Packages STP</Link></li>
-                            <li><Link to="/ProductDetails">Effluent Treatment Plants</Link></li>
-                            <li><Link to="/ProductDetails">Packages ETP</Link></li>
-                          </ul>
-                        </li>
-                        <li><Link to="/ProductCategories">Industrial Water Solutions </Link>
-                          <ul>
-                            <li><Link to="/ProductDetails">Sewage Treatment plants</Link></li>
-                            <li><Link to="/ProductDetails">Packages STP</Link></li>
-                            <li><Link to="/ProductDetails">Effluent Treatment Plants</Link></li>
-                            <li><Link to="/ProductDetails">Packages ETP</Link></li>
-                          </ul>
-                        </li>
-                        <li><Link to="/ProductCategories">Domestic & Industrial </Link></li>
-                        <li><Link to="/ProductCategories">Drinking Water Solutions</Link></li>
-                        <li><Link to="/ProductCategories">Water Vending Machine</Link></li>
-                        <li><Link to="/ProductCategories">Water Vending Station</Link></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </Nav.Link>
-                <Nav.Item>
-                  <Nav.Link eventKey="technologies" as={Link} to="/technologies">
-                    Technologies
-                  </Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                  <Nav.Link eventKey="career" as={Link} to="/career">
-                    Careers
-                  </Nav.Link>
-                </Nav.Item>
-
-                <Nav.Item>
-                  <Nav.Link eventKey="contact" as={Link} to="/contact">
-                    Contact
-                  </Nav.Link>
-                </Nav.Item>
-              </Nav>
-            </Navbar.Collapse>
-          </Container>
-        </Navbar>
-      </section> */}
-
       <Navbar bg="light" collapseOnSelect expand="lg">
         <Container>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -210,12 +84,7 @@ export default function Header() {
                   About Us
                 </Nav.Link>
               </Nav.Item>
-              {/* <Nav.Item>
-                <Nav.Link eventKey="ServicesPage" as={Link} to="/ServicesPage">
-                  Services
-                </Nav.Link>
-              </Nav.Item> */}
-  
+
               <Nav.Item>
                   <ul className="dropdown">
                     <li>
@@ -223,8 +92,16 @@ export default function Header() {
                       Products
                     </Nav.Link>
                     <ul className="dropdown-chaild">
-                        <li><Link to="/ProductCategories">Water Vending Machine</Link></li>
-                        <li><Link to="/ProductCategories">Water Vending Station</Link></li>
+                          {
+                          headerLink.map((headeritem) => {
+                                return(
+                                    <li key={headeritem.id}>
+                                       <Link to="/ProductCategories">{headeritem.name}</Link>
+                                    </li>
+                                    )
+                              })
+                          }
+                        {/* <li><Link to="/ProductCategories">Water Vending Station</Link></li>
                         <li><Link to="/ProductCategories">Wastewater Treatment</Link>
                           <ul>
                             <li><Link to="/ProductDetails">Sewage Treatment plants</Link></li>
@@ -253,16 +130,17 @@ export default function Header() {
                           </ul>
                         </li>
                         <li><Link to="/ProductCategories">Drinking Water Solutions</Link>
-                        <ul>
+                          <ul>
                             <li><Link to="/ProductDetails">Turnkey Project for Packaged</Link></li>
                             <li><Link to="/ProductDetails">RO Dringking Water Plants</Link></li>
                           </ul>
-                        </li>
+                        </li> */}
                         
                       </ul>
                     </li>
                 </ul>
               </Nav.Item>
+
         
               <Nav.Item>
                 <Nav.Link eventKey="services" as={Link} to="/services">

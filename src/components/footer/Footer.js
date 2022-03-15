@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Image, Modal, Button, Form } from 'react-bootstrap';
 import './footer.css'
 import { Link } from "react-router-dom";
@@ -8,6 +8,21 @@ export default function Footer() {
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+
+    const [footerLink, setFooterLink] = useState([]);
+    const getFooterCat = async () => {
+      fetch('http://127.0.0.1:8000/api/ga/categories')
+        .then((response)  =>  response.json())
+        .then((response)  =>  {
+          setFooterLink(response.data); 
+        }).catch((err)  =>  {
+          console.log(err.message);
+        })
+  }
+  
+  useEffect(() =>{
+      getFooterCat();
+  }, []);
   return (
     <>
      
@@ -69,36 +84,16 @@ export default function Footer() {
                <h3>Our Products</h3>
             </div>
             <ul className="footer-details footer-list">
-               <li>
-                  <i className="fal fa-chevron-right"></i> 
-                  <Link to="/">
-                  Wastewater Treatment</Link>
-               </li>
-               <li>
-                  <i className="fal fa-chevron-right"></i> 
-                  <Link to="/">
-                  Industrial Water Solutions</Link>
-               </li>
-               <li>
-                  <i className="fal fa-chevron-right"></i> 
-                  <Link to="/">
-                  Domestic & Industrial</Link>
-               </li>
-               <li>
-                  <i className="fal fa-chevron-right"></i> 
-                  <Link to="/">
-                  Drinking Water Solutions</Link>
-               </li>
-               <li>
-                  <i className="fal fa-chevron-right"></i> 
-                  <Link to="/">
-                  Water Vending Machine</Link>
-               </li>
-               <li>
-                  <i className="fal fa-chevron-right"></i> 
-                  <Link to="/">
-                  Water Vending Station</Link>
-               </li>
+               {
+                  footerLink.map((footersitem) => {
+                    return(
+                     <li key={footersitem.id}>
+                        <i className="fal fa-chevron-right"></i> 
+                        <Link to="/">{footersitem.name}</Link>
+                     </li>
+                     )
+                  })
+               }
             </ul>
          </div>
          </Col>
@@ -138,18 +133,6 @@ export default function Footer() {
 <div className='copywrite'>
    <p className="text-center text-white">Copyright ©2021<span className=""> GreenAqua</span>. Design &amp; Develop By <a href="www.odms.in/" rel=""  target="_blank" className="text-white"> ODMS Pvt Ltd. </a></p>
 </div>
-
-{/* watstapp button */}
-    {/* <section>
-    <div className="wf-pop" onClick={handleShow}>
-        <Image  src={require('../../assets/images/req.png')}/>
-    </div>
-    <div className="follow-whatsapp">
-        <a href="https://web.whatsapp.com/send?phone=+91 1234567890 &amp;text=Towards the creation of a home for your dream" title="Contact Us On WhatsApp" target="_blank">
-        <i className="fab fa-whatsapp"></i>
-        </a>
-    </div>
-    </section> */}
 
     <div className="wf-pop" onClick={handleShow}>
         <Image  src={require('../../assets/images/req.png')}/>
