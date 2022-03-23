@@ -3,25 +3,30 @@ import { Container, Navbar, Nav, Col, Row, Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import logo from "../../assets/images/logo.jpg";
 import "./header.css";
+import axios from 'axios';
 
 export default function Header() {
   // const [showDropdown, setShowDropd  own] = useState(false);
   const [active, setActive] = useState("home");
 
-  const [headerLink, setHeaderCatLink] = useState([]);
-  const getHeaderCat = async () => {
-    fetch('http://127.0.0.1:8000/api/ga/categories')
-      .then((response)  =>  response.json())
-      .then((response)  =>  {
-        setHeaderCatLink(response.data); 
-      }).catch((err)  =>  {
-        console.log(err.message);
-      })
-}
-
-useEffect(() =>{
-    getHeaderCat();
+const [headerLink, setHeaderCatLink] = useState([]);
+useEffect(() => {
+fetchHeaderCatLink();
 }, []);
+const fetchHeaderCatLink = () => {
+axios
+    .get('/api/ga/categories')
+    .then((res) => {
+   //  console.log(res);
+    setHeaderCatLink(res.data.data);
+    })
+    .catch((err) => {
+    console.log(err);
+    });
+};
+
+
+
   return (
     <>
       <div className="top-header">
@@ -96,7 +101,7 @@ useEffect(() =>{
                           headerLink.map((headeritem) => {
                                 return(
                                     <li key={headeritem.id}>
-                                       <Link to="/ProductCategories">{headeritem.name}</Link>
+                                       <Link to={`/products/${headeritem.id}`}>{headeritem.name}</Link>
                                     </li>
                                     )
                               })

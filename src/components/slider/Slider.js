@@ -11,9 +11,8 @@ export default function Banner() {
   }, []);
   const fetchBanner = () => {
   axios
-      .get('http://127.0.0.1:8000/api/ga/banners')
+      .get('/api/ga/banners')
       .then((res) => {
-      console.log(res);
       setBanner(res.data.data);
       })
       .catch((err) => {
@@ -33,10 +32,10 @@ export default function Banner() {
     <>
     <section className="main-slider ">
         <Slider {...settings}>
-                    {banner.map((image) => (
-                        <div className="banner-slider">
+                    {banner.map((images) => (
+                        <div className="banner-slider" key={images.id}>
                             <div className="banner-img">
-                               <img src={'http://127.0.0.1:8000/'+image.thumb} alt='greenAqua' />
+                               <img src={'http://127.0.0.1:8000/storage/images/large-jtZvCvmKFwGlYCBl74qxkA8WCG1lkT1sar3q2FCR-1647063554.jpg'} alt='greenAqua' />
                              </div>
                         </div>
                         ))}

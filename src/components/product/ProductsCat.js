@@ -30,7 +30,7 @@ function ProductsCat(props) {
              <img src={props.img} />
             <h3>{props.title}</h3>
             <p>{props.description}</p>
-            <Link to="/ProductDetails">{props.more}</Link>
+            <Link to="/ProductsCategories">{props.more}</Link>
       </div>
     </div>
   )

@@ -11,7 +11,7 @@ export default function Gallery() {
             }, []);
             const fetchGallery = () => {
             axios
-                .get('http://127.0.0.1:8000/api/ga/files/gallery/true')
+                .get('/api/ga/files/gallery/true')
                 .then((res) => {
                 console.log(res);
                 setGallery(res.data.data);

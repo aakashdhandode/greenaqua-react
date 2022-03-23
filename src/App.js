@@ -12,7 +12,8 @@ import Clients from './view/Clients';
 import ProductDetails from './view/ProductDetails';
 import Downloads from './view/Downloads';
 import Products from './view/Products';
-import ProductCategories from './view/ProductCategories';
+import ProductsCategories from './view/ProductsCategories';
+import Details from './view/Details';
 
 
 class App extends Component {
@@ -24,14 +25,15 @@ class App extends Component {
           <div>
             <Header />
             <Switch>
-              <Route exact path="/" component={Home} />
+              <Route exact path="/" component={Home}/>
               <Route exact path="/About" component={About} />
               <Route exact path="/Services" component={Services} />
               <Route exact path="/Clients" component={Clients} />
               <Route exact path="/Gallery" component={Gallery} />
               <Route exact path="/Products" component={Products} />
-              <Route exact path="/ProductCategories" component={ProductCategories} />
-              <Route exact path="/ProductDetails" component={ProductDetails} />
+              <Route exact path="/Products/:id"  component={ProductsCategories} />
+              {/* <Route exact path="/ProductDetails:id" component={ProductDetails} /> */}
+              <Route exact path="/Details/:id" component={Details} />
               <Route exact path="/Downloads" component={Downloads} />
               <Route exact path="/Contact" component={Contact} />
             </Switch>

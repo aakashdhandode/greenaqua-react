@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Image, Modal, Button, Form } from 'react-bootstrap';
 import './footer.css'
 import { Link } from "react-router-dom";
+import axios from 'axios';
 
 export default function Footer() {
     const [show, setShow] = useState(false);
@@ -9,20 +10,23 @@ export default function Footer() {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-    const [footerLink, setFooterLink] = useState([]);
-    const getFooterCat = async () => {
-      fetch('http://127.0.0.1:8000/api/ga/categories')
-        .then((response)  =>  response.json())
-        .then((response)  =>  {
-          setFooterLink(response.data); 
-        }).catch((err)  =>  {
-          console.log(err.message);
-        })
-  }
-  
-  useEffect(() =>{
-      getFooterCat();
-  }, []);
+const [footerLink, setFooterLink] = useState([]);
+useEffect(() => {
+fetchFooterLink();
+}, []);
+const fetchFooterLink = () => {
+axios
+    .get('/api/ga/categories')
+    .then((res) => {
+   //  console.log(res);
+    setFooterLink(res.data.data);
+    })
+    .catch((err) => {
+    console.log(err);
+    });
+};
+
+
   return (
     <>
      
@@ -84,7 +88,7 @@ export default function Footer() {
                <h3>Our Products</h3>
             </div>
             <ul className="footer-details footer-list">
-               {
+               {/* {
                   footerLink.map((footersitem) => {
                     return(
                      <li key={footersitem.id}>
@@ -93,7 +97,13 @@ export default function Footer() {
                      </li>
                      )
                   })
-               }
+               } */}
+               {footerLink.map((footeritem) => (
+                  <li key={footeritem.id}>
+                        <i className="fal fa-chevron-right"></i> 
+                        <Link to="/">{footeritem.name}</Link>
+                     </li>
+                        ))}
             </ul>
          </div>
          </Col>

@@ -22,6 +22,10 @@ export default function Home() {
         <Slider />
         <Popup />
 
+      
+
+        
+
         {/* our 3 services */}
         <section className='home-product-card'>
         <Container>
@@ -45,6 +49,11 @@ export default function Home() {
         </Container>
         </section>
         
+
+
+
+
+
         {/* home page welcome section */}
         <section className='new-about-bg'>
         <Container fluid>

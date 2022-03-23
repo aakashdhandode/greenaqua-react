@@ -12,9 +12,9 @@ export default function Downloads() {
     }, []);
     const fetchGallery = () => {
     axios
-        .get('http://127.0.0.1:8000/api/ga/files/broucher/true')
+        .get('/api/ga/files/broucher/true')
         .then((res) => {
-        console.log(res);
+        // console.log(res);
         setDownloads(res.data.data);
         })
         .catch((err) => {
@@ -36,9 +36,9 @@ export default function Downloads() {
             <Container>
                 <Row>
                 {downloads.map((broucher) => (
-                    <Col sm={3}>
-                    <div className="work-pro text-center">
-                      <a href={'http://127.0.0.1:8000/'+broucher.original} download target="_blank">
+                    <Col sm={3} key={broucher.id}>
+                    <div className="work-pro text-center" >
+                        <a href={'http://127.0.0.1:8000/'+broucher.original} download target="_blank">
                           <h2>{broucher.name}</h2>
                           <Image  src={require('../assets/images/downbutton.jpg')} />
                        </a>

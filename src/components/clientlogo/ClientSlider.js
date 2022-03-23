@@ -15,9 +15,9 @@ function ClientSlider() {
   }, []);
   const fetchGallery = () => {
   axios
-      .get('http://127.0.0.1:8000/api/ga/files/client/true')
+      .get('/api/ga/files/client/true')
       .then((res) => {
-      console.log(res);
+      // console.log(res);
       setGallery(res.data.data);
       })
       .catch((err) => {
@@ -69,9 +69,10 @@ function ClientSlider() {
               {/* <OurClient 
                 img={Brouchersimg}
               /> */}
-              {gallery.map((image) => (
+                   {gallery.map((image) => (
+                     <div key={image.id}>
                             <img src={'http://127.0.0.1:8000/'+image.original} alt='greenAqua' />
-                       
+                      </div>
                         ))}
              
              {/* <div className='clentslogo-card'>

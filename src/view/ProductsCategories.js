@@ -2,19 +2,21 @@ import React, { useState, useEffect } from 'react';
 import { Col, Container, Row, Image } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import {useParams} from 'react-router-dom';
 
-export default function Products() {
+export default function ProductsCategories() {
  
   const [products, setProducts] = useState([]);
+  const params = useParams();
   useEffect(() => {
   fetchProducts();
   }, []);
   const fetchProducts = () => {
   axios
-      .get('/api/ga/categories')
+      .get(`/api/ga/${params.id}/products`)
       .then((res) => {
       console.log(res);
-      setProducts(res.data.data);
+      setProducts(res.data.data?.data ?? []);
       })
       .catch((err) => {
       console.log(err);
@@ -40,10 +42,10 @@ export default function Products() {
              {products.map((mainproduct) => (
                     <Col sm={3} key={mainproduct.id}>
                       <div className='home-tab-product-card pro-height'>
-                              <Image  src={require('../assets/images/pro1.jpg')}/>
+                              <img src={'http://127.0.0.1:8000/'+mainproduct.original} alt='greenAqua' />
                               <h3>{mainproduct.name}</h3>
-                              <Link to={`/products/${mainproduct.id}`}>
-                              More..</Link>
+                              <p>{mainproduct.description}</p>
+                              <Link to={`/Details/${mainproduct.id}`}>More..</Link>                            
                         </div>
                     </Col>
              ))}

@@ -1,20 +1,29 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Col, Container, Row, Image} from 'react-bootstrap';
 // import Homeclients from '../components/clientlogo/HomeClients';
 import { Link } from "react-router-dom";
 import OurClient from '../components/clientlogo/OurClient';
 import Brouchersimg from '../assets/images/clients/01.png';
+import axios from 'axios';
 
 export default function Clients() {
+  const [gallery, setGallery] = useState([]);
+  useEffect(() => {
+  fetchGallery();
+  }, []);
+  const fetchGallery = () => {
+  axios
+      .get('/api/ga/files/client/true')
+      .then((res) => {
+      // console.log(res);
+      setGallery(res.data.data);
+      })
+      .catch((err) => {
+      console.log(err);
+      });
+  };
   return (
     <>
-         <section className='product-page'>
-            <Container>
-              <div className='product-page-pg-title'>
-                  <i className="fas fa-home"></i><span>Our Clients</span>
-              </div>
-            </Container>
-        </section>
         <section className='product-page-sub'>
           <Container>
             <div className='pro-discription'>
@@ -27,7 +36,20 @@ export default function Clients() {
         <section className='clients-bg'>
            <Container>
                <Row className='pt-3'>
-                   <Col sm={2} xs={6}>
+               {gallery.map((image) => (
+                 <Col sm={2} xs={6}>
+                     <div className='clentslogo-card' key={image.id}>
+                     <img src={'http://127.0.0.1:8000/'+image.original} alt='greenAqua' />
+                      </div>
+                   </Col>
+                   ))}
+                   {/* {gallery.map((image) => (
+                     <div key={image.id}>
+                            <img src={'http://127.0.0.1:8000/'+image.original} alt='greenAqua' />
+                      </div> */}
+                      
+
+                   {/* <Col sm={2} xs={6}>
                       <OurClient
                           img={Brouchersimg}
                        />
@@ -71,10 +93,10 @@ export default function Clients() {
                       <OurClient
                           img={Brouchersimg}
                        />
-                   </Col>
+                   </Col> */}
                    
 
-
+                  
 
 
                   {/*  <Col sm={2} xs={6}>
