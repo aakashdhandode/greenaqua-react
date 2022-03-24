@@ -22,11 +22,7 @@ export default function Details() {
             });
     };
 
-
-
-
-
-
+    
     return (
         <div>
             <section className='product-page-sub'>
@@ -42,13 +38,12 @@ export default function Details() {
                 <Container>
                     <Row>
                         <Col sm={8}>
-                            <Row>
+
+                            <Row key={product.id}>
                                 <Col sm={4}>
                                     <div className='pro-det-img'>
-                                       
-                                        {product?.featured?.map((featured) => (
-                                            <Image src={'http://127.0.0.1:8000/' + featured.original} alt='greenAqua' />
-                                        ))}
+                                        {/* <Image  src={require('../assets/images/productone.jpg')}/> */}
+                                        <img src={'http://127.0.0.1:8000/' + product.thumb} alt='greenAqua' />
                                     </div>
                                 </Col>
                                 <Col sm={8}>
@@ -60,29 +55,23 @@ export default function Details() {
                                         </div>
                                     </div>
                                 </Col>
-
-
-                                {/* Advanteg */}
                                 <div>
                                     <h4 className="details-title">Advantages</h4>
                                     <ul className='groupul'>
-                                        {product?.advantages?.map((advantage) => (
-                                            <li><i className="fa fa-arrow-circle-right" id="background"></i>{advantage.advantage}</li>
-                                        ))}
+                                        <li><i className="fa fa-arrow-circle-right" id="background"></i>{product.advantages.advantage}</li>
                                     </ul>
                                 </div>
-
-                                {/* Details */}
                                 <h4 className="details-title">Details</h4>
-                                    <table className="table table-striped details-des">
-                                        <tbody>
-                                            <tr>
-                                                {product?.values?.map((value) => (
-                                                    <th>{value.name}</th>
-                                            ))}
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                <table className="table table-striped details-des">
+                                    <tbody>
+                                        <tr>
+                                            <th>{product.name}</th>
+                                            <td>
+                                                <p>{product.value}</p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </Row>
                         </Col>
 
@@ -108,7 +97,7 @@ export default function Details() {
                                     <Form.Control type="text" className='input-feild-height' placeholder="Enter Phone" />
                                 </Form.Group>
                                 <Form.Group className="mb-3"  >
-                                    <textarea className="form-control" rows="3" placeholder="Enter Message"></textarea>
+                                    <textarea className="form-control" id="" rows="3" placeholder="Enter Message"></textarea>
                                 </Form.Group>
                                 <Button variant="primary" type="submit" className='btn-theme-colored'>Send your message</Button>
                             </Form>

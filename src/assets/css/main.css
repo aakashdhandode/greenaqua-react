@@ -451,8 +451,8 @@ html, body{
 }
 .details-title {
     padding: 5px 0 5px;
-    font-weight: 900;
-    font-size: 23px;
+    font-weight: 600;
+    font-size: 18px;
 }
 .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
     padding: 3px 0px 0px 15px!important;

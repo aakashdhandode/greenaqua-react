@@ -70,7 +70,7 @@ function ClientSlider() {
                 img={Brouchersimg}
               /> */}
                    {gallery.map((image) => (
-                     <div key={image.id}>
+                     <div key={image.id} className="clentslogo-card">
                             <img src={'http://127.0.0.1:8000/'+image.original} alt='greenAqua' />
                       </div>
                         ))}

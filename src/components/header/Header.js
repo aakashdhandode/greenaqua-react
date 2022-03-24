@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Navbar, Nav, Col, Row, Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import logo from "../../assets/images/logo.jpg";
+import logo from "../../assets/images/logo.png";
 import "./header.css";
 import axios from 'axios';
 

@@ -9,7 +9,6 @@ import Services from './view/Services';
 import Gallery from './view/Gallery';
 import Contact from './view/Contact';
 import Clients from './view/Clients';
-import ProductDetails from './view/ProductDetails';
 import Downloads from './view/Downloads';
 import Products from './view/Products';
 import ProductsCategories from './view/ProductsCategories';
