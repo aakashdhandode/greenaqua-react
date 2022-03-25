@@ -3,9 +3,11 @@ import { Col, Container, Row, Image, Form, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
+import EnquiryForm from '../components/EnquiryForm';
 
 export default function Details() {
     const [product, setProduct] = useState({});
+
     const params = useParams();
     useEffect(() => {
         fetchProducts();
@@ -21,9 +23,6 @@ export default function Details() {
                 console.log(err);
             });
     };
-
-
-
 
 
 
@@ -44,12 +43,11 @@ export default function Details() {
                         <Col sm={8}>
                             <Row>
                                 <Col sm={4}>
-                                    <div className='pro-det-img'>
-                                       
-                                        {product?.featured?.map((featured) => (
-                                            <Image src={'http://127.0.0.1:8000/' + featured.original} alt='greenAqua' />
-                                        ))}
-                                    </div>
+                                    {/* {product?.featured?.map((mainproduct) => (
+                                        <div className='pro-det-img' key={mainproduct.id}>
+                                            <img src={'http://127.0.0.1:8000/' + mainproduct.featured.original} alt='greenAqua' />
+                                        </div>
+                                    ))} */}
                                 </Col>
                                 <Col sm={8}>
                                     <div>
@@ -74,15 +72,16 @@ export default function Details() {
 
                                 {/* Details */}
                                 <h4 className="details-title">Details</h4>
-                                    <table className="table table-striped details-des">
-                                        <tbody>
-                                            <tr>
-                                                {product?.values?.map((value) => (
-                                                    <th>{value.name}</th>
+                                <table className="table table-striped details-des">
+                                    <tbody>
+                                        <tr>
+                                            {product?.values?.map((value) => (
+                                                <th>{value.name}</th>
+
                                             ))}
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </Row>
                         </Col>
 
@@ -93,25 +92,8 @@ export default function Details() {
 
 
                         <Col sm={4}>
-                            <Form className='details-form-shedo'>
-                                <h4 className="det-title">Product Enquiry</h4>
-                                <Form.Group className="mb-3">
-                                    <Form.Control type="text" className='input-feild-height' placeholder="Enter Name" />
-                                </Form.Group>
-                                <Form.Group className="mb-3">
-                                    <Form.Control type="text" className='input-feild-height' placeholder="Enter email" />
-                                </Form.Group>
-                                <Form.Group className="mb-3">
-                                    <Form.Control type="text" className='input-feild-height' placeholder="Enter Company Name" />
-                                </Form.Group>
-                                <Form.Group className="mb-3">
-                                    <Form.Control type="text" className='input-feild-height' placeholder="Enter Phone" />
-                                </Form.Group>
-                                <Form.Group className="mb-3"  >
-                                    <textarea className="form-control" rows="3" placeholder="Enter Message"></textarea>
-                                </Form.Group>
-                                <Button variant="primary" type="submit" className='btn-theme-colored'>Send your message</Button>
-                            </Form>
+                            <EnquiryForm />
+                        
                         </Col>
                     </Row>
                 </Container>

@@ -2,16 +2,10 @@ import React, { useState, useEffect } from 'react';
 import Slider from '../components/slider/Slider';
 // import Products from '../components/productstab/Products';
 import StretgyCard from '../components/stretgycard/StretgyCard';
-// import Homeclients from '../components/clientlogo/HomeClients';
-import '../components/banner/Banner';
 import '../assets/css/main.css'
 import { Col, Container, Row, Image, Tabs, Tab } from 'react-bootstrap';
 import homeabout from "../assets/images/homeabout.jpg";
 import '../assets/css/product.css'
-import Productone from "../assets/images/productone.jpg";
-import Producttwo from "../assets/images/producttwo.jpg";
-import Producttree from "../assets/images/producttree.jpg";
-import ProductCat from '../components/product/ProductsCat';
 import ClientSlider from '../components/clientlogo/ClientSlider';
 import ContactForm from '../components/ContactForm';
 import Popup from '../components/Popup';
@@ -169,12 +163,12 @@ export default function Home() {
                     <Row>
                         {products.map((mainproduct) => (
                             <Col sm={3} key={mainproduct.id}>
+                            <Link to={`/products/${mainproduct.id}`}>
                                 <div className='home-tab-product-card pro-height'>
-                                    <Image src={require('../assets/images/pro1.jpg')} />
+                                <img src={'http://127.0.0.1:8000/'+mainproduct.images.original} alt='greenAqua' />
                                     <h3>{mainproduct.name}</h3>
-                                    <Link to={`/products/${mainproduct.id}`}>
-                                        More..</Link>
                                 </div>
+                            </Link>
                             </Col>
                         ))}
                     </Row>

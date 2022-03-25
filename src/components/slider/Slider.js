@@ -32,10 +32,10 @@ export default function Banner() {
     <>
     <section className="main-slider ">
         <Slider {...settings}>
-                    {banner.map((images) => (
-                        <div className="banner-slider" key={images.id}>
+                    {banner.map((banner) => (
+                        <div className="banner-slider" key={banner.id}>
                             <div className="banner-img">
-                               <img src={'http://127.0.0.1:8000/storage/images/large-jtZvCvmKFwGlYCBl74qxkA8WCG1lkT1sar3q2FCR-1647063554.jpg'} alt='greenAqua' />
+                               <img src={'http://127.0.0.1:8000/'+banner.images.original} alt='greenAqua' />
                              </div>
                         </div>
                         ))}

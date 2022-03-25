@@ -64,6 +64,7 @@
     color: #000000eb;
     /* font-weight: 600; */
     line-height: 19px;
+    margin: 0;
     text-align: center;
     overflow: hidden;
     text-overflow: ellipsis;
