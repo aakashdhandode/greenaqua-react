@@ -39,19 +39,19 @@ export default function Details() {
 
             <section className='details-page-padding'>
                 <Container>
-                    <Row>
+                    <Row >
                         <Col sm={8}>
                             <Row>
                                 <Col sm={4}>
                                     {/* {product?.featured?.map((mainproduct) => (
                                         <div className='pro-det-img' key={mainproduct.id}>
-                                            <img src={'http://127.0.0.1:8000/' + mainproduct.featured.original} alt='greenAqua' />
+                                            <img src={'http://127.0.0.1:8000/'+ mainproduct.featured.original} alt='greenAqua' />
                                         </div>
                                     ))} */}
                                 </Col>
                                 <Col sm={8}>
                                     <div>
-                                        <h3><h3>{product.name}</h3></h3>
+                                        <h3>{product.name}</h3>
                                         <div className='descriptions-details'>
                                             <p>{product.description}
                                             </p>
@@ -65,7 +65,7 @@ export default function Details() {
                                     <h4 className="details-title">Advantages</h4>
                                     <ul className='groupul'>
                                         {product?.advantages?.map((advantage) => (
-                                            <li><i className="fa fa-arrow-circle-right" id="background"></i>{advantage.advantage}</li>
+                                            <li key={advantage.id}><i className="fa fa-arrow-circle-right" id="background"></i>{advantage.advantage}</li>
                                         ))}
                                     </ul>
                                 </div>
@@ -76,7 +76,7 @@ export default function Details() {
                                     <tbody>
                                         <tr>
                                             {product?.values?.map((value) => (
-                                                <th>{value.name}</th>
+                                                <th key={value.id} >{value.name}</th>
 
                                             ))}
                                         </tr>

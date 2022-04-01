@@ -20,7 +20,7 @@ class App extends Component {
     return (
       <div>
        
-          <Router basename={"/greenaqua"}>
+          <Router basename={"/web"}>
           <div>
             <Header />
             <Switch>

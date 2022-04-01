@@ -1,29 +1,49 @@
 import React, { useState, useEffect } from 'react';
+import Slider from "react-slick";
 import { Container, Navbar, Nav, Col, Row, Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import logo from "../../assets/images/logo.png";
 import "./header.css";
 import axios from 'axios';
+import { useParams } from 'react-router-dom';
 
 export default function Header() {
   // const [showDropdown, setShowDropd  own] = useState(false);
   const [active, setActive] = useState("home");
 
-const [headerLink, setHeaderCatLink] = useState([]);
-useEffect(() => {
-fetchHeaderCatLink();
-}, []);
-const fetchHeaderCatLink = () => {
-axios
-    .get('/api/ga/categories')
-    .then((res) => {
-   //  console.log(res);
-    setHeaderCatLink(res.data.data);
-    })
-    .catch((err) => {
-    console.log(err);
-    });
-};
+  const [headerLink, setHeaderCatLink] = useState([]);
+  useEffect(() => {
+    fetchHeaderCatLink();
+  }, []);
+  const fetchHeaderCatLink = () => {
+    axios
+      .get('/api/ga/categories')
+      .then((res) => {
+        //  console.log(res);
+        setHeaderCatLink(res.data.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
+  const [products, setProducts] = useState([]);
+  const params = useParams();
+  useEffect(() => {
+    fetchProducts();
+  }, []);
+  const fetchProducts = () => {
+    axios
+      .get(`/api/ga/${params.id}/products`)
+      .then((res) => {
+        console.log(res);
+        setProducts(res.data.data?.data ?? []);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
 
 
 
@@ -33,10 +53,10 @@ axios
         <Container>
           <Row>
             <Col sm={6} >
-                <div className="name-mail">
+              <div className="name-mail">
                 <a href="/" target="_blank" rel=""  >Call: +91 040 233 233 33</a>
                 <a href="/" target="_blank" rel=""  >Email: contact@greenaqua.in</a>
-                </div>
+              </div>
             </Col>
             <Col sm={6}>
               <div className="social-icons">
@@ -91,22 +111,32 @@ axios
               </Nav.Item>
 
               <Nav.Item>
-                  <ul className="dropdown">
-                    <li>
-                        <Nav.Link eventKey="products" as={Link} to="/products">
+                <ul className="dropdown">
+                  <li>
+                    <Nav.Link eventKey="products" as={Link} to="/products">
                       Products
                     </Nav.Link>
                     <ul className="dropdown-chaild">
-                          {
-                          headerLink.map((headeritem) => {
-                                return(
-                                    <li key={headeritem.id}>
-                                       <Link to={`/products/${headeritem.id}`}>{headeritem.name}</Link>
-                                    </li>
-                                    )
-                              })
-                          }
-                        {/* <li><Link to="/ProductCategories">Water Vending Station</Link></li>
+                      {
+                        headerLink.map((headeritem) => {
+                          return (
+                            <li key={headeritem.id}>
+                              <Link to={`/products/${headeritem.id}`}>{headeritem.name}</Link>
+                              <ul>
+                                {/* <li><Link to="/ProductDetails">Sewage Treatment plants</Link></li>
+                                <li><Link to="/ProductDetails">Packages STP</Link></li>
+                                <li><Link to="/ProductDetails">Effluent Treatment Plants</Link></li>
+                                <li><Link to="/ProductDetails">Packages ETP</Link></li> */}
+                                {products.map((mainproduct) => (
+                                  <li key={mainproduct.id}><Link to="/Details">{mainproduct.name}</Link></li>
+                                  ))} 
+                              </ul>
+                            </li>
+                          )
+                        })
+                      }
+                 
+                      {/* <li><Link to="/ProductCategories">Water Vending Station</Link></li>
                         <li><Link to="/ProductCategories">Wastewater Treatment</Link>
                           <ul>
                             <li><Link to="/ProductDetails">Sewage Treatment plants</Link></li>
@@ -140,26 +170,26 @@ axios
                             <li><Link to="/ProductDetails">RO Dringking Water Plants</Link></li>
                           </ul>
                         </li> */}
-                        
-                      </ul>
-                    </li>
+
+                    </ul>
+                  </li>
                 </ul>
               </Nav.Item>
 
-        
+
               <Nav.Item>
                 <Nav.Link eventKey="services" as={Link} to="/services">
-                 Services
+                  Services
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item>
                 <Nav.Link eventKey="gallery" as={Link} to="/gallery">
-                 Gallery
+                  Gallery
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item>
                 <Nav.Link eventKey="downloads" as={Link} to="/downloads">
-                Brouchers
+                  Brouchers
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item>

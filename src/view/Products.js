@@ -39,12 +39,12 @@ export default function Products() {
           <Row>
             {products.map((mainproduct) => (
               <Col sm={3} key={mainproduct.id}>
+              <Link to={`/products/${mainproduct.id}`}>
                 <div className='home-tab-product-card pro-height'>
                   <img src={'http://127.0.0.1:8000/' + mainproduct.images.original} alt='greenAqua' />
                   <h3>{mainproduct.name}</h3>
-                  <Link to={`/products/${mainproduct.id}`}>
-                    More..</Link>
                 </div>
+                </Link>
               </Col>
             ))}
           </Row>

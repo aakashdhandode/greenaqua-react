@@ -7,6 +7,7 @@ import { Col, Container, Row, Image, Tabs, Tab } from 'react-bootstrap';
 import homeabout from "../assets/images/homeabout.jpg";
 import '../assets/css/product.css'
 import ClientSlider from '../components/clientlogo/ClientSlider';
+import CatSlider from '../components/product/CatSlider'
 import ContactForm from '../components/ContactForm';
 import Popup from '../components/Popup';
 import axios from 'axios';
@@ -29,33 +30,10 @@ export default function Home() {
                 console.log(err);
             });
     };
-
-
-    // const [productscat, setProductsCat] = useState([]);
-    // const params = useParams();
-    // useEffect(() => {
-    //     fetchProductsCat();
-    // }, []);
-    // const fetchProductsCat = () => {
-    //     axios
-    //         .get(`/api/ga/${params.id}/products`)
-    //         .then((res) => {
-    //             console.log(res);
-    //             setProductsCat(res.data.data?.data ?? []);
-    //         })
-    //         .catch((err) => {
-    //             console.log(err);
-    //         });
-    // };
-
-
-
-
-
     return (
         <>
             <Slider />
-            {/* <Popup /> */}
+            <Popup />
             {/* our 3 services */}
             <section className='home-product-card'>
                 <Container>
@@ -160,29 +138,24 @@ export default function Home() {
                         <h1>Our Products</h1>
                         <p> With Esteemed Quality certifications from Water Quality and focus on Safety and Environment MAnagement Systems, Green Aqua is committed to maintain the highest standards for Health, Saftey and Environment.</p>
                     </div>
-                    <Row>
+                    {/* <Row>
                         {products.map((mainproduct) => (
                             <Col sm={3} key={mainproduct.id}>
-                            <Link to={`/products/${mainproduct.id}`}>
-                                <div className='home-tab-product-card pro-height'>
-                                <img src={'http://127.0.0.1:8000/'+mainproduct.images.original} alt='greenAqua' />
-                                    <h3>{mainproduct.name}</h3>
-                                </div>
-                            </Link>
+                                <Link to={`/products/${mainproduct.id}`}>
+                                    <div className='home-tab-product-card pro-height'>
+                                        <img src={'http://127.0.0.1:8000/' + mainproduct.images.original} alt='greenAqua' />
+                                        <h3>{mainproduct.name}</h3>
+                                    </div>
+                                </Link>
                             </Col>
                         ))}
-                    </Row>
-
+                    </Row> */}
+                    <CatSlider />
                 </Container>
             </section>
 
-
-
-
-
-
-
             {/* end our product tabs section */}
+           
 
             <section className='pt-4'><StretgyCard /></section>
             <ClientSlider />

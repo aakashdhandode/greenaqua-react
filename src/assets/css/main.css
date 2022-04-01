@@ -575,6 +575,40 @@ html, body{
     .new-about-bg .offers-containt {
         padding: 36px 9px 0px 9px;
     }
+    .follow-instagram {
+        bottom: 3%;
+        left: 4px;
+        line-height: 0;
+        height: 45px;
+        width: 45px;
+    }
+    .follow-facebook {
+        bottom: 10%;
+        left: 0px;
+        line-height: 0;
+        height: 45px;
+        width: 45px;
+    }
+    .follow-whatsapp {
+        bottom: 17%;
+        left: 1px;
+        line-height: 0;
+        height: 45px;
+        width: 45px;
+    }
+    .follow-facebook .fa-phone {
+        font-size: 21px;
+    }
+    .follow-instagram .fa-envelope {
+        font-size: 21px;}
+    .green-module {
+        color: #fff;
+        height: 297px;
+        padding: 53px 12px 9px;
+        position: relative;
+        width: 100%;
+        margin: 0 0 12px 0;
+    }
     .partner-logo {
         width: 60px!important;
         padding: 9px 0px 0 17px;
@@ -696,4 +730,11 @@ html, body{
 .top-header .social-icons{
     text-align: end;
 
+}
+
+@media (min-width: 576px){
+.modal-dialog {
+    max-width: 410px;
+    margin: 1.75rem auto;
+}
 }

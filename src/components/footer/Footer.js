@@ -41,9 +41,9 @@ export default function Footer() {
                      <div className='footer-links'>
                         <div className="footer-social-icons mt-3">
                            <a href="instagram.com" target="_blank" rel=""  ><i className="fab fa-instagram"></i></a>
-                           <a href="facebook.com" target="_blank" rel=""  ><i className="fab fa-facebook-f"></i></a>
+                           <a href="https://www.facebook.com/greenaquaenviro" target="_blank" rel=""  ><i className="fab fa-facebook-f"></i></a>
                            <a href="linkedin.com" target="_blank" rel=""  ><i className="fab fa-linkedin"></i></a>
-                           <a href="youtube.com" target="_blank" rel=""  ><i className="fab fa-youtube"></i></a>
+                           <a href="https://twitter.com/" target="_blank" rel=""  ><i className="fab fa-youtube"></i></a>
                            <a href="twitter.com" target="_blank" rel=""  ><i className="fab fa-twitter"></i></a>
                         </div>
                      </div>
@@ -113,22 +113,23 @@ export default function Footer() {
                            <h3>Contact us</h3>
                         </div>
                         <div className="footer-address-info-item mt-2">
-                           <p className="footer-physical-address">Patrika Nagar,Hitech City, Madhapur Hyderabad - 500 081
+                           <p className="footer-physical-address"> #204, Sahiti petals, 2nd street
+                              Patrika Nagar,Hitech City, Madhapur
+                              Hyderabad - 500 081
                               Telangana State, India
                            </p>
                         </div>
                         <div className="footer-address-info-item">
                            <p className="footer-contact-number">
                               Phone :
-                              <Link to="">
-                                 +91 7032949672</Link>
+                              <Link to=""> +91 040 233 233 33</Link>
                            </p>
                         </div>
                         <div className="footer-address-info-item">
                            <p className="footer-email">
                               Email :
                               <Link to="">
-                                 <span className="">example@gmail.com</span></Link>
+                                 <span className=""> contact@greenaqua.in</span></Link>
                            </p>
                         </div>
                      </div>
@@ -144,9 +145,9 @@ export default function Footer() {
             <p className="text-center text-white">Copyright ©2022<span className=""> GreenAqua</span>. Design &amp; Develop By <a href="www.odms.in/" rel="" target="_blank" className="text-white"> ODMS Pvt Ltd. </a></p>
          </div>
 
-         {/* <div className="wf-pop" onClick={handleShow}>
+         <div className="wf-pop" onClick={handleShow}>
             <Image src={require('../../assets/images/req.png')} />
-         </div> */}
+         </div>
 
          <div className="container-fluid">
             <div className="">

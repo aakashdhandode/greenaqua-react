@@ -17,7 +17,6 @@ function ClientSlider() {
   axios
       .get('/api/ga/files/client/true')
       .then((res) => {
-      // console.log(res);
       setGallery(res.data.data);
       })
       .catch((err) => {

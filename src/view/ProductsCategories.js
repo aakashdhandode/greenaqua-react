@@ -37,14 +37,16 @@ export default function ProductsCategories() {
       <section className='pt-5 pb-5'>
         <Container>
           <Row>
-           
+
             {products.map((mainproduct) => (
               <Col sm={3} key={mainproduct.id}>
                 <div className='home-tab-product-card'>
-                  <img src={'http://127.0.0.1:8000/' + mainproduct.featured.original} alt='greenAqua' />
-                  <h3>{mainproduct.name}</h3>
-                  <p>{mainproduct.description}</p>
-                  <Link to={`/Details/${mainproduct.id}`}>More..</Link>
+                  <Link to={`/Details/${mainproduct.id}`}>
+                    <img src={'http://127.0.0.1:8000/' + mainproduct.featured.original} alt='greenAqua' />
+                    <h3>{mainproduct.name}</h3>
+                    <p>{mainproduct.description}</p>
+                    <Link to={`/Details/${mainproduct.id}`}>More..</Link>
+                  </Link>
                 </div>
               </Col>
             ))}
