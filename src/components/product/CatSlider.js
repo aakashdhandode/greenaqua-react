@@ -23,14 +23,22 @@ function CatSlider() {
 
 
     const settings = {
-        dots: false,
-        autoplay: true,
-        arrows: true,
-        infinite: false,
-        speed: 2000,
+        // dots: false,
+        // autoplay: true,
+        // arrows: true,
+        // infinite: false,
+        // speed: 2000,
+        // slidesToShow: 4,
+        // margin: 5,
+        // slidesToScroll: 1,
         slidesToShow: 4,
-        margin: 5,
         slidesToScroll: 1,
+        infinite: false,
+        autoplay: true,
+        speed: 5000,
+        autoplaySpeed: 0,
+        cssEase: 'linear',
+        arrows: false,
         responsive: [
             {
                 breakpoint: 1024,
@@ -60,9 +68,9 @@ function CatSlider() {
     return (
         <div>
             <Slider {...settings}>
-                <div className='home-cat-slider'>
-                    {products.map((mainproduct) => (
-                        <div key={mainproduct.id}>
+                {products.map((mainproduct) => (
+                    <div key={mainproduct.id}>
+                        <div className='home-cat-slider'>
                             <Link to={`/products/${mainproduct.id}`}>
                                 <div className='home-tab-product-card pro-height'>
                                     <img src={'http://127.0.0.1:8000/' + mainproduct.images.original} alt='greenAqua' />
@@ -70,8 +78,9 @@ function CatSlider() {
                                 </div>
                             </Link>
                         </div>
-                    ))}
-                </div>
+
+                    </div>
+                ))}
             </Slider>
         </div>
     )

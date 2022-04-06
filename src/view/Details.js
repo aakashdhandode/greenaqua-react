@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import EnquiryForm from '../components/EnquiryForm';
+import CatSlider from '../components/product/CatSlider';
 
 export default function Details() {
     const [product, setProduct] = useState({});
@@ -42,27 +43,23 @@ export default function Details() {
                     <Row >
                         <Col sm={8}>
                             <Row>
-                                <Col sm={4}>
-                                    {/* {product?.featured?.map((mainproduct) => (
-                                        <div className='pro-det-img' key={mainproduct.id}>
-                                            <img src={'http://127.0.0.1:8000/'+ mainproduct.featured.original} alt='greenAqua' />
+                                <div className='pro-details-sec'>
+
+                                    <img src="http://demo.odms.in/greenaqua/static/media/producttwo.d0aa7fe13de8f02968e2.jpg" alt="Pineapple" className='img-fulid details-img' />
+                                    {/* {product?.featured?.map((productimg) => (
+                                        <div className='pro-det-img' key={productimg.id}>
+                                            <img src={'http://127.0.0.1:8000/'+ productimg.featured.original} alt='greenAqua' className='img-fulid details-img' />
                                         </div>
                                     ))} */}
-                                </Col>
-                                <Col sm={8}>
-                                    <div>
-                                        <h3>{product.name}</h3>
-                                        <div className='descriptions-details'>
-                                            <p>{product.description}
-                                            </p>
-                                        </div>
-                                    </div>
-                                </Col>
 
+                                    <h3>{product.name}</h3>
+                                    <p>{product.description}</p>
+                                </div>
+                                <div className='clerfix'></div>
 
                                 {/* Advanteg */}
                                 <div>
-                                    <h4 className="details-title">Advantages</h4>
+                                    <h4 className="details-title">Features :</h4>
                                     <ul className='groupul'>
                                         {product?.advantages?.map((advantage) => (
                                             <li key={advantage.id}><i className="fa fa-arrow-circle-right" id="background"></i>{advantage.advantage}</li>
@@ -71,31 +68,36 @@ export default function Details() {
                                 </div>
 
                                 {/* Details */}
-                                <h4 className="details-title">Details</h4>
+                                <div>
+                                <h4 className="details-title">Product Details :</h4>
                                 <table className="table table-striped details-des">
                                     <tbody>
-                                        <tr>
-                                            {product?.values?.map((value) => (
-                                                <th key={value.id} >{value.name}</th>
-
-                                            ))}
-                                        </tr>
+                                        {product?.values?.map((item, i) => (
+                                            <tr key={i}>
+                                                <th>{item.name}</th>
+                                                <td>{item.value}</td>
+                                            </tr>
+                                        ))}
                                     </tbody>
                                 </table>
+                                </div>
                             </Row>
                         </Col>
-
-
-
-
-
-
-
                         <Col sm={4}>
-                            <EnquiryForm />
-                        
+                            <div class="proconfig">
+                                <EnquiryForm />
+                            </div>
                         </Col>
                     </Row>
+                </Container>
+            </section>
+
+            <section className='pb-5'>
+                <Container>
+                    <div>
+                        <h5 className='explores'>Explore More Products :</h5>
+                    </div>
+                    <CatSlider />
                 </Container>
             </section>
 

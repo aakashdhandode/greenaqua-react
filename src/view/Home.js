@@ -40,18 +40,26 @@ export default function Home() {
                     <Row>
                         <Col sm={4}>
                             <Image src={require('../assets/images/img01.png')} alt="greenaqua" />
-                            <h3>Domestic Range</h3>
-                            <p>Green Aqua engaged in manufacturing, supplying and distributing Water RO Purifiers and Home Softeners for Residential and Small Business users. These water Purifiers are designed and developed in accordance with the guidelines laid in the industry to attain highest benchmarks of quality. We uniquely positioned to offer our clients one stop &amp; integrated solutions for household, institutional, commercial, industrial by leveraging our expertise across various technologies to cater the needs of domestic.</p>
+                            <h3>Drinking water plants</h3>
+                            <p>Green Aqua engaged in manufacturing, supplying and distribution RO Purification plants for Residential, Business users and community level for drinking water applications. These water Purifiers are designed and developed in accordance with the guidelines laid in the industry to attain highest benchmarks of quality. We uniquely positioned to offer our clients one stop & integrated solutions for household, institutional, commercial, industrial by leveraging our expertise across various technologies to cater the needs of drinking water. We are experts in establishment packaged drinking water plants as per BIS standards to various packaged water business segments,
+                             standalone water vending  station for institutional and commercial segments.</p>
                         </Col>
                         <Col sm={4}>
                             <Image src={require('../assets/images/img02.png')} alt="greenaqua" />
-                            <h3>Commercial & Industrial</h3>
-                            <p>Green Aqua is engaged in offering the commercial and Industrial Water Treatment Plants. Under this category, we offer our customers a wide range of solutions for drinking, process and recycling applications which includes Reverse Osmosis Plants(RO), Ultra Filtration(UF), nano filtration(NF), UV Purification Systems, Pressure sand filters, Activated carbon filters, Water Softeners, DM Plants, Mixed Bed Units, Desalination plants, Sewage Treatment Plants(STP)</p>
+                            <h3>Residential & Commercial </h3>
+                            <p>Green Aqua is engaged in offering the commercial and Industrial Water Treatment Plants and solutions under one roof. Under this category, we offer our customers a wide range of individual and turnkey solutions for drinking, domestic usage and recycling applications which includes Reverse Osmosis Plants (RO), Ultra Filtration (UF), UV Purification Systems, Pressure sand filters, activated carbon filters, Water Softeners, Desalination plants, Sewage Treatment Plants (STP), Pumps and Hydro pneumatic systems, heat pumps, organic waste converters etc.  We offer end- to- end support in design,
+                             supply, erections commissioning, operation and maintenance works as turn key basis. </p>
                         </Col>
                         <Col sm={4}>
                             <Image src={require('../assets/images/img03.png')} alt="greenaqua" />
-                            <h3>Water Treatment Solutions</h3>
-                            <p>Green Aqua expertise lies in designing of Sewage treatment or effluent treatment plant that meet individual site requirements by creating a versatile, reliable and an efficient design that on one hand meets the stringent discharge norms and regulations of Pollution control Board (PCB). Our design includes physical, chemical and biological processes to remove physical, chemical and biological contaminants. Its objective is to produce a waste stream (or treated effluent) and a solid waste or sludge suitable for.</p>
+                            <h3>Industrial Water & waste Treatment Solutions</h3>
+                            <p>Green Aqua expertise lies in designing, supply, erection and commissioning water& waste treatment plants includes membrane
+                             plants- Ultra filtration and RO plants, filtration plants- PSF, ACF, Micron filters, De mineralisation, Mixed bed, softeners and 
+                             waste water treatment plants- STP, ETP, ZLD to various industries for process and manufacturing applications on EPC basis. 
+                             Our treatment plants that meet individual site requirements by creating a versatile, reliable, quality, economic and an efficient 
+                             design that meets the process input quality requirements and stringent discharge norms and regulations of Pollution control Board (PCB). 
+                             Our design includes physical,
+                             chemical and biological processes to remove physical, chemical and biological contaminants.  </p>
                         </Col>
                     </Row>
                 </Container>
@@ -67,17 +75,14 @@ export default function Home() {
                         <Col sm={6}>
                             <div className="offers-containt">
                                 <h3>Welcome to Green Aqua Enviro Projects Private Limited, Hyderabad, India.</h3>
-                                <p>Welcome to Green Aqua Enviro Projects Private Limited, Hyderabad, India. Green Aqua is one of the leading
-                                    specialist in water treatment industry operate in the Designing, manufacturing, supply,
-                                    erection and commissioning of water and waste water treatment plants. At Green Aqua,
-                                    we are uniquely positioned to offer our clients one stop &amp; integrated solutions for
-                                    household, institutional, commercial, industrial by leveraging our expertise across various
-                                    technologies to cater the needs of domestic, commercial and industrial requirements.
+                                <p>Welcome to Green Aqua Enviro Projects Private Limited, Hyderabad, India. Green Aqua is one of the leading expert 
+                                in water and waste treatment industry operate in the Engineering, manufacturing, supply, erection and commissioning.
+                                 At Green Aqua, we are uniquely positioned to offer our clients one stop & integrated solutions for residential, institutional,
+                                 commercial and industrial by leveraging our expertise across various technologies to cater the needs of clients.
                                 </p>
-                                <p>By Integrating process thechnolgy, design engineering and project management capabilites,
-                                    we take end-to-end responsibility in planning, sourcing, integrating and managing water &amp;
-                                    waste water plants, thus providing customers with total systems solutions with a long term commitment
-                                    for quality and service.
+                                <p>By Integrating process technology, design engineering and project management capabilities, we take end-to-end responsibility in planning, 
+                                sourcing, integrating and managing water & waste water plants,
+                                 thus providing customers with total systems solutions with a long-term commitment for quality and service.
                                 </p>
                             </div>
                         </Col>
@@ -136,7 +141,9 @@ export default function Home() {
                 <Container>
                     <div className='section-title text-center'>
                         <h1>Our Products</h1>
-                        <p> With Esteemed Quality certifications from Water Quality and focus on Safety and Environment MAnagement Systems, Green Aqua is committed to maintain the highest standards for Health, Saftey and Environment.</p>
+                        <p> With Esteemed Quality certifications from Water
+                         Quality and focus on Safety and Environment MAnagement Systems, Green Aqua is committed to maintain the
+                          highest standards for Health, Saftey and Environment.</p>
                     </div>
                     {/* <Row>
                         {products.map((mainproduct) => (

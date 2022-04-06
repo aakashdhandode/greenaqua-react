@@ -88,16 +88,6 @@ export default function Footer() {
                            <h3>Our Products</h3>
                         </div>
                         <ul className="footer-details footer-list">
-                           {/* {
-                  footerLink.map((footersitem) => {
-                    return(
-                     <li key={footersitem.id}>
-                        <i className="fal fa-chevron-right"></i> 
-                        <Link to="/">{footersitem.name}</Link>
-                     </li>
-                     )
-                  })
-               } */}
                            {footerLink.map((footeritem) => (
                               <li key={footeritem.id}>
                                  <i className="fal fa-chevron-right"></i>

@@ -26,14 +26,14 @@ function ClientSlider() {
 
 
   const settings = {
-    dots: false,
-    autoplay: true,
-    arrows: true,
-    infinite: false,
-    speed: 2000,
     slidesToShow: 6,
-    margin:5,
     slidesToScroll: 1,
+    infinite: true,
+    autoplay: true,
+    speed: 5000,
+    autoplaySpeed: 0,
+    cssEase: 'linear',
+    arrows: false,
     responsive: [
       {
         breakpoint: 1024,

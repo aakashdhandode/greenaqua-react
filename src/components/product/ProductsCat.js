@@ -19,24 +19,69 @@
 
 // export default Product
 
-import React from 'react'
-import { Link } from 'react-router-dom'
-import PropTypes from 'prop-types'
+// import React from 'react'
+// import { Link } from 'react-router-dom'
+// import PropTypes from 'prop-types'
 
-function ProductsCat(props) {
+// function ProductsCat(props) {
+//   return (
+//     <div>
+//       <div className="home-tab-product-card">
+//              <img src={props.img} />
+//             <h3>{props.title}</h3>
+//             <p>{props.description}</p>
+//             <Link to="/ProductsCategories">{props.more}</Link>
+//       </div>
+//     </div>
+//   )
+// }
+
+// ProductsCat.propTypes = {}
+
+// export default ProductsCat
+
+import React, { useState, useEffect } from 'react';
+import { Link } from "react-router-dom";
+import axios from 'axios';
+
+function ProductsCat() {
+  const [products, setProducts] = useState([]);
+  useEffect(() => {
+    fetchProducts();
+  }, []);
+  const fetchProducts = () => {
+    axios
+      .get('/api/ga/categories')
+      .then((res) => {
+        console.log(res);
+        setProducts(res.data.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
   return (
     <div>
-      <div className="home-tab-product-card">
-             <img src={props.img} />
-            <h3>{props.title}</h3>
-            <p>{props.description}</p>
-            <Link to="/ProductsCategories">{props.more}</Link>
-      </div>
+      {products.map((mainproduct) => (
+        <div key={mainproduct.id}>
+          <div className='home-cat-slider'>
+            <Link to={`/products/${mainproduct.id}`}>
+              <div className='home-tab-product-card pro-height'>
+                <img src={'http://127.0.0.1:8000/' + mainproduct.images.original} alt='greenAqua' />
+                <h3>{mainproduct.name}</h3>
+              </div>
+            </Link>
+          </div>
+
+        </div>
+      ))}
     </div>
   )
 }
 
-ProductsCat.propTypes = {}
-
 export default ProductsCat
+
+
+
+
 

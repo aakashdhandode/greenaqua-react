@@ -6,9 +6,9 @@
 }
 .section-title p{
     padding: 3px 256px;
-    font-size: 15px;
     color: #000000;
     font-weight: 400;
+    font-size: 14.5px;
 }
 .products-tabs .nav-tabs .nav-link {
     margin-bottom: 0px;
@@ -53,25 +53,29 @@
     height: 197px;
 }
 .home-tab-product-card h3 {
-    padding: 11px 0 4px;
-    font-size: 17px;
+    padding: 8px 0 1px;
+    font-size: 15.5px;
     margin: 0;
-    font-weight: 600;
     color: #0a1d68;
     text-transform: capitalize;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
 }
 .home-cat-slider{
     padding: 0 9px;
 }
 .home-tab-product-card p {
     font-size: 13px;
-    color: #000000eb;
-    font-weight: 100;
+    color: #000000;
+    font-weight: 400;
     line-height: 19px;
-    font-family: sans-serif;
     margin: 0;
     text-align: center;
     overflow: hidden;
+    padding-top: 4px;
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 3;
@@ -83,7 +87,6 @@
     color: #051d7c;
     letter-spacing: 0.3px;
     font-weight: 700;
-    font-family: sans-serif;
 }
 
 .pro-height{
@@ -94,7 +97,10 @@
 }
 
 .details-page-padding h3{
-    font-size: 23px;
     text-transform: capitalize;
-    font-weight: 500;
+    /* font-weight: 500; */
+    /* color: black; */
+    /* padding: 12px 0 0px; */
+    font-weight: 600;
+    font-size: 18px;
 }

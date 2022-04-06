@@ -121,7 +121,8 @@ export default function Header() {
                         headerLink.map((headeritem) => {
                           return (
                             <li key={headeritem.id}>
-                              <Link to={`/products/${headeritem.id}`}>{headeritem.name}</Link>
+                              {/* <Link to={`/products/${headeritem.id}`}>{headeritem.name}</Link> */}
+                              <a href={`/products/${headeritem.id}`}>{headeritem.name}</a>
                               <ul>
                                 {/* <li><Link to="/ProductDetails">Sewage Treatment plants</Link></li>
                                 <li><Link to="/ProductDetails">Packages STP</Link></li>
@@ -129,13 +130,13 @@ export default function Header() {
                                 <li><Link to="/ProductDetails">Packages ETP</Link></li> */}
                                 {products.map((mainproduct) => (
                                   <li key={mainproduct.id}><Link to="/Details">{mainproduct.name}</Link></li>
-                                  ))} 
+                                ))}
                               </ul>
                             </li>
                           )
                         })
                       }
-                 
+
                       {/* <li><Link to="/ProductCategories">Water Vending Station</Link></li>
                         <li><Link to="/ProductCategories">Wastewater Treatment</Link>
                           <ul>

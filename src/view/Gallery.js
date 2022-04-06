@@ -37,7 +37,9 @@ export default function Gallery() {
                     <Row>
                       {gallery.map((image) => (
                         <Col sm={3} key={image.id}>
-                            <img src={'http://127.0.0.1:8000/'+image.thumb} alt='greenAqua' />
+                            <div className='gallery-image-zoom'>
+                                <img src={'http://127.0.0.1:8000/'+image.thumb} alt='greenAqua' />
+                            </div>
                         </Col>
                         ))}
                     </Row>
