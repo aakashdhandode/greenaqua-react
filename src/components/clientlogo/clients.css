@@ -1,6 +1,6 @@
 .clients-bg{
     background: rgb(245 245 245 / 69%);
-    padding: 59px 0 75px;
+    padding: 41px 0 40px;
 }
 .clentslogo-card{
     border-radius: 4px;
@@ -17,10 +17,10 @@
     height: 107px;
 }
 .more-client-btn{
-    background-image: -webkit-linear-gradient( 
-        0deg, rgb(13,34,52) 0%, rgb(13,77,132) 100%)!important;
-            color: white;
-            padding: 9px 42px;
+    background-image: -webkit-linear-gradient( 0deg, rgb(13,34,52) 0%, rgb(13,77,132) 100%)!important;
+    color: white;
+    padding: 5px 23px;
+    font-size: 12px;
 }
 .client-slider .slick-slide {
     

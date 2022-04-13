@@ -20,7 +20,7 @@ class App extends Component {
     return (
       <div>
        
-          <Router basename={"/web"}>
+          <Router basename={"/"}>
           <div>
             <Header />
             <Switch>
@@ -31,7 +31,6 @@ class App extends Component {
               <Route exact path="/Gallery" component={Gallery} />
               <Route exact path="/Products" component={Products} />
               <Route exact path="/Products/:id"  component={ProductsCategories} />
-              {/* <Route exact path="/ProductDetails:id" component={ProductDetails} /> */}
               <Route exact path="/Details/:id" component={Details} />
               <Route exact path="/Downloads" component={Downloads} />
               <Route exact path="/Contact" component={Contact} />

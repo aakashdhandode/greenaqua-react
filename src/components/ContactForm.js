@@ -188,7 +188,7 @@ class ContactForm extends Component {
                     <Col sm={6}>
                         <div className=''>
                             <h3 className="line-bottom">Leave Your <span className="text-theme-colored">Comment</span> Here</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error optio in
+                            <p className='c-d-p'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error optio in
                                 quia ipsum quae
                                 neque alias eligendi, nulla nisi. Veniam ut quis similique culpa natus dolor aliquam
                                 .</p>

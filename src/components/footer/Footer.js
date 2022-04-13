@@ -16,7 +16,7 @@ export default function Footer() {
    }, []);
    const fetchFooterLink = () => {
       axios
-         .get('/api/ga/categories')
+         .get('http://3.111.169.240/api/ga/categories')
          .then((res) => {
             //  console.log(res);
             setFooterLink(res.data.data);
@@ -35,8 +35,9 @@ export default function Footer() {
                <Row>
                   <Col sm={4}>
                      <div className="footer-logo">
-                        <Image src={require('../../assets/images/logo.jpg')} className='img-fluid' />
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus molestiae, in aspernatur distinctio eveniet neque excepturi numquam</p>
+                        <Image src={require('../../assets/images/logo.png')} className='img-fluid' />
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus molestiae, in aspernatur
+                         distinctio eveniet neque excepturi numquam</p>
                      </div>
                      <div className='footer-links'>
                         <div className="footer-social-icons mt-3">

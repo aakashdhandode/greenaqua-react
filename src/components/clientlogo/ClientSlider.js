@@ -11,16 +11,16 @@ function ClientSlider() {
 
   const [gallery, setGallery] = useState([]);
   useEffect(() => {
-  fetchGallery();
+    fetchGallery();
   }, []);
   const fetchGallery = () => {
-  axios
-      .get('/api/ga/files/client/true')
+    axios
+      .get('http://3.111.169.240/api/ga/files/client/true')
       .then((res) => {
-      setGallery(res.data.data);
+        setGallery(res.data.data);
       })
       .catch((err) => {
-      console.log(err);
+        console.log(err);
       });
   };
 
@@ -62,33 +62,25 @@ function ClientSlider() {
   };
   return (
     <div>
-    <section className='clients-bg client-slider'>
-       <Container>
+      <section className='clients-bg client-slider'>
+        <Container>
           <Slider {...settings}>
-              {/* <OurClient 
+            {/* <OurClient 
                 img={Brouchersimg}
               /> */}
-                   {gallery.map((image) => (
-                     <div key={image.id} className="clentslogo-card">
-                            <img src={'http://127.0.0.1:8000/'+image.original} alt='greenAqua' />
-                      </div>
-                        ))}
-             
-             {/* <div className='clentslogo-card'>
-                <Image  src={require('../../assets/images/clients/01.png')}/>
-             </div>
-           
-             <div className='clentslogo-card'>
-                <Image  src={require('../../assets/images/clients/10.png')}/>
-             </div> */}
+            {gallery.map((image) => (
+              <div key={image.id} className="clentslogo-card">
+                <img src={'http://3.111.169.240/' + image.original} alt='greenAqua' />
+              </div>
+            ))}
           </Slider>
-          <div className='text-center mt-3'>
-             <Link to="/clients" className='more-client-btn'>
-             See More</Link>
+          <div className='text-center'>
+            <Link to="/clients" className='more-client-btn'>
+              See More</Link>
           </div>
-       </Container>
-    </section>
- </div>
+        </Container>
+      </section>
+    </div>
   )
 }
 

@@ -13,7 +13,7 @@ export default function ProductsCategories() {
   }, []);
   const fetchProducts = () => {
     axios
-      .get(`/api/ga/${params.id}/products`)
+      .get(`http://3.111.169.240/api/ga/${params.id}/products`)
       .then((res) => {
         console.log(res);
         setProducts(res.data.data?.data ?? []);
@@ -41,7 +41,7 @@ export default function ProductsCategories() {
               <Col sm={3} key={mainproduct.id}>
                 <div className='home-tab-product-card'>
                 <Link to={`/Details/${mainproduct.id}`}>
-                  <img src={'http://127.0.0.1:8000/' + mainproduct.featured.original} alt='greenAqua' />
+                  <img src={'http://3.111.169.240/' + mainproduct.featured.original} alt='greenAqua' />
                   <h3>{mainproduct.name}</h3>
                   <p>{mainproduct.description}</p>
                   <Link to={`/Details/${mainproduct.id}`}>More..</Link>

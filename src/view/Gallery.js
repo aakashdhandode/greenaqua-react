@@ -5,21 +5,21 @@ import ClientSlider from '../components/clientlogo/ClientSlider';
 import axios from 'axios';
 export default function Gallery() {
 
-            const [gallery, setGallery] = useState([]);
-            useEffect(() => {
-            fetchGallery();
-            }, []);
-            const fetchGallery = () => {
-            axios
-                .get('/api/ga/files/gallery/true')
-                .then((res) => {
+    const [gallery, setGallery] = useState([]);
+    useEffect(() => {
+        fetchGallery();
+    }, []);
+    const fetchGallery = () => {
+        axios
+            .get('http://3.111.169.240/api/ga/files/gallery/true')
+            .then((res) => {
                 console.log(res);
                 setGallery(res.data.data);
-                })
-                .catch((err) => {
+            })
+            .catch((err) => {
                 console.log(err);
-                });
-            };
+            });
+    };
     return (
         <>
             <section className='product-page-sub'>
@@ -27,24 +27,38 @@ export default function Gallery() {
                     <div className='pro-discription'>
                         <h3>Gallery</h3>
                         <p>Check out the categories below to find the right products and solutions for you. And,
-                         if you don't find what you're looking for, please contact us.</p>
+                            if you don't find what you're looking for, please contact us.</p>
                     </div>
                 </Container>
             </section>
 
-            <section className='pt-5 pb-5 gallery-img'>
+
+            <section className="pt-2 pb-5">
                 <Container>
-                    <Row>
-                      {gallery.map((image) => (
+                    <Row className="wrapper">
+                    {gallery.map((image) => (
                         <Col sm={3} key={image.id}>
-                            <div className='gallery-image-zoom'>
-                                <img src={'http://127.0.0.1:8000/'+image.thumb} alt='greenAqua' />
+                            <div className="zoom-effect-container">
+                                <div className="image-card">
+                                    {/* <img src="https://superdevresources.com/wp-content/uploads/2014/12/lions.jpg" /> */}
+                                    <img src={'http://3.111.169.240/'+image.thumb} alt='greenAqua' />
+                                </div>
                             </div>
                         </Col>
                         ))}
+                        {/* <Col sm={3}>
+                            <div className="zoom-effect-container">
+                                <div className="image-card">
+                                    <img src="https://superdevresources.com/wp-content/uploads/2014/12/lions.jpg" />
+                                </div>
+                            </div>
+                        </Col> */}
                     </Row>
                 </Container>
             </section>
+
+
+
 
 
 

@@ -21,7 +21,7 @@ export default function Home() {
     }, []);
     const fetchProducts = () => {
         axios
-            .get('/api/ga/categories')
+            .get('http://3.111.169.240/api/ga/categories')
             .then((res) => {
                 console.log(res);
                 setProducts(res.data.data);
@@ -106,7 +106,7 @@ export default function Home() {
                                         {productscat.map((mainproductcat) => (
                                             <Col sm={3} key={mainproductcat.id}>
                                                 <div className='home-tab-product-card pro-height'>
-                                                    <img src={'http://127.0.0.1:8000/' + mainproduct.original} alt='greenAqua' />
+                                                    <img src={'http://3.111.169.240/' + mainproduct.original} alt='greenAqua' />
                                                     <h3>{mainproductcat.name}</h3>
                                                     <p>{mainproductcat.description}</p>
                                                     <Link to={`/Details/${mainproduct.id}`}>More..</Link>
@@ -150,7 +150,7 @@ export default function Home() {
                             <Col sm={3} key={mainproduct.id}>
                                 <Link to={`/products/${mainproduct.id}`}>
                                     <div className='home-tab-product-card pro-height'>
-                                        <img src={'http://127.0.0.1:8000/' + mainproduct.images.original} alt='greenAqua' />
+                                        <img src={'http://3.111.169.240/' + mainproduct.images.original} alt='greenAqua' />
                                         <h3>{mainproduct.name}</h3>
                                     </div>
                                 </Link>

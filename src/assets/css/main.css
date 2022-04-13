@@ -356,7 +356,7 @@ html, body{
     color:#1b54c5;
 }
 .list-icon li {
-    font-size: 16.8px;
+    font-size: 14.5px;
     margin: 0;
 }
 .flot-left-contact{
@@ -385,7 +385,7 @@ html, body{
     font-size: 16px;
 }
 .contact-details p{
-    font-size: 16.8px;
+    font-size: 14.5px;
 }
 
     .input-feild-height {
@@ -393,9 +393,9 @@ html, body{
 }
 .btn-theme-colored {
     font-weight: 500!important;
-    background-image: -webkit-linear-gradient( 
-0deg, rgb(13,34,52) 0%, rgb(13,77,132) 100%)!important;
+    background-image: -webkit-linear-gradient( 0deg, rgb(13,34,52) 0%, rgb(13,77,132) 100%)!important;
     color: white;
+    font-size: 13px;
 }
 .bg-no-repeat{
     padding: 49px 0;
@@ -439,9 +439,11 @@ html, body{
     padding-left: 0; 
 }
 .groupul li{
+
     list-style: none;
-    padding: 0 0 8px;
-    font-size: 16px;
+    padding: 0 0 5px;
+    font-size: 15px;
+
 }
 #background {
     background-color: white;
@@ -460,6 +462,11 @@ html, body{
 }
 .table>tbody>tr>th{
     font-weight: 600;
+    font-size: 14px;
+    font-weight: 600;
+}
+.table>tbody>tr>td{
+    font-size: 14.5px;
 }
 .details-page-padding{
     padding: 58px 0 17px;
@@ -708,6 +715,7 @@ html, body{
     .footer-number {
         margin-top: 14px;
         padding: 0 0 0 26px;
+        
     }
     .get-started-btn {
         padding: 12px 15px;
@@ -767,6 +775,7 @@ html, body{
     text-align: justify;
     font-size: 14.5px;
     color: #4e4b4b;
+    line-height: 22px;
 }
 
 @media (min-width: 576px){
@@ -777,57 +786,6 @@ html, body{
 }
 
 
-.gallery {
-	display: flex;
-	flex-wrap: wrap;
-	/* Compensate for excess margin on outer gallery flex items */
-	margin: -1rem -1rem;
-}
-
-.gallery-item {
-	/* Minimum width of 24rem and grow to fit available space */
-	flex: 1 0 24rem;
-	/* Margin value should be half of grid-gap value as margins on flex items don't collapse */
-	margin: 1rem;
-	box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
-	overflow: hidden;
-}
-
-.gallery-image {
-	display: block;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	transition: transform 400ms ease-out;
-}
-
-.gallery-image:hover {
-	transform: scale(1.15);
-}
-
-/*
-
-The following rule will only run if your browser supports CSS grid.
-
-Remove or comment-out the code block below to see how the browser will fall-back to flexbox styling. 
-
-*/
-
-@supports (display: grid) {
-	.gallery {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
-		grid-gap: 2rem;
-	}
-
-	.gallery,
-	.gallery-item {
-		margin: 0;
-	}
-}
-
-
-
 .explores{
     padding: 5px 0 0px;
     font-weight: 600;
@@ -835,4 +793,155 @@ Remove or comment-out the code block below to see how the browser will fall-back
 }
 .proconfig{
     padding: 0 25px;
+}
+
+
+.zoom-effect-container {
+     width: 100%;
+     border: 1px solid #80808054;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.image-card img {
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+  width: 100%;
+  height: 254px;
+}
+
+.zoom-effect-container:hover .image-card img {
+  -webkit-transform: scale(1.08);
+  transform: scale(1.08);
+}
+
+
+/* .product-zoo .zoom-effect-container {
+    width: 100%;
+    border: 1px solid #80808054;
+   overflow: hidden;
+   margin: 10px 0;
+}
+
+.product-zoo .image-card img {
+    -webkit-transition: 0.4s ease;
+    transition: 0.4s ease;
+    width: 100%;
+    height: 254px;
+  }
+  .product-zoo .zoom-effect-container:hover .image-card img {
+    -webkit-transform: scale(1.08);
+    transform: scale(1.08);
+  }
+ */
+
+ .ttm-row {
+    padding: 80px 0 83px;
+}
+.div-padding {
+    padding: 0 1px;
+}
+.v-section-title svg {
+    color: #1d4c9f;
+    font-size: 63px;
+}
+.titlemis {
+    color: #000;
+    font-size: 21px;
+    line-height: 5px;
+    padding: 17px 0 7px;
+}
+.div-padding .res-991-pb-0 p {
+    color: #000;
+    line-height: 23px!important;
+    text-align: center!important;
+
+}
+
+.home-ab-section {
+    padding: 92px 0;
+}
+.about-title {
+    margin-bottom: 1px;
+}
+.about-title h4 {
+    color: #1d4c9f;
+    font-size: 18px;
+    font-weight: 600;
+}
+.con-heading {
+    color: #292929;
+    font-size: 24px;
+    font-weight: 500;
+    padding-bottom: 0;
+    position: relative;
+    width: 100%;
+}
+.con-heading:before {
+    background: #1d4c9f;
+    bottom: -4px;
+    content: "";
+    height: 3px;
+    left: 0;
+    position: absolute;
+    width: 30px;
+}
+.about-wrap p {
+    text-align: justify;
+}
+.home-page .about-img:before {
+    bottom: 50px;
+    content: "";
+    left: -20px;
+    position: absolute;
+    right: 50%;
+    top: -20px;
+    z-index: 1;
+}
+.about-img:before {
+    background: #1d4c9f;
+}
+.about-img img {
+    position: relative;
+    z-index: 10;
+}
+.about-imgg {
+    width: 100%;
+}
+.about-img-title.ait_2 {
+    background: #fff;
+    box-shadow: 1px 1px 1px #1d4c9f;
+    color: #1d4c9f;
+    left: auto;
+    right: -60px;
+}
+.color-bg {
+    background: #1d4c9f;
+}
+.about-img-title {
+    background: #2d2d32;
+    color: hsla(0,0%,100%,.71);
+    font-size: 11px;
+    font-weight: 600;
+    left: -120px;
+    letter-spacing: 6px;
+    padding: 15px 85px;
+    position: absolute;
+    text-transform: uppercase;
+    top: 80px;
+    z-index: 23;
+}
+.fl-wrap {
+    float: left;
+    position: relative;
+    width: 100%;
+}
+.contact-details h3{
+    font-size: 22px;
+}
+.line-bottom {
+    font-size: 22px;
+}
+.c-d-p{
+    font-size: 14.5px;
 }

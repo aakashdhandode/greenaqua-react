@@ -7,16 +7,16 @@ import axios from 'axios';
 export default function Banner() {
   const [banner, setBanner] = useState([]);
   useEffect(() => {
-  fetchBanner();
+    fetchBanner();
   }, []);
   const fetchBanner = () => {
-  axios
-      .get('/api/ga/banners')
+    axios
+      .get('http://3.111.169.240/api/ga/banners')
       .then((res) => {
-      setBanner(res.data.data);
+        setBanner(res.data.data);
       })
       .catch((err) => {
-      console.log(err);
+        console.log(err);
       });
   };
   const settings = {
@@ -30,16 +30,16 @@ export default function Banner() {
   };
   return (
     <>
-    <section className="main-slider ">
+      <section className="main-slider ">
         <Slider {...settings}>
-                    {banner.map((banner) => (
-                        <div className="banner-slider" key={banner.id}>
-                            <div className="banner-img">
-                               <img src={'http://127.0.0.1:8000/'+banner.images.original} alt='greenAqua' />
-                             </div>
-                        </div>
-                        ))}
-          </Slider>
+          {banner.map((banner) => (
+            <div className="banner-slider" key={banner.id}>
+              <div className="banner-img">
+                <img src={'http://3.111.169.240/' + banner.images.original} alt='greenAqua' />
+              </div>
+            </div>
+          ))}
+        </Slider>
       </section>
     </>
   );

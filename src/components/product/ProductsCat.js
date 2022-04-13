@@ -51,7 +51,7 @@ function ProductsCat() {
   }, []);
   const fetchProducts = () => {
     axios
-      .get('/api/ga/categories')
+      .get('http://3.111.169.240/api/ga/categories')
       .then((res) => {
         console.log(res);
         setProducts(res.data.data);
@@ -67,7 +67,7 @@ function ProductsCat() {
           <div className='home-cat-slider'>
             <Link to={`/products/${mainproduct.id}`}>
               <div className='home-tab-product-card pro-height'>
-                <img src={'http://127.0.0.1:8000/' + mainproduct.images.original} alt='greenAqua' />
+                <img src={'http://3.111.169.240/' + mainproduct.images.original} alt='greenAqua' />
                 <h3>{mainproduct.name}</h3>
               </div>
             </Link>

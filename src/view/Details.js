@@ -15,7 +15,7 @@ export default function Details() {
     }, []);
     const fetchProducts = () => {
         axios
-            .get(`/api/ga/product/${params.id}`)
+            .get(`http://3.111.169.240/api/ga/product/${params.id}`)
             .then((res) => {
                 console.log(res);
                 setProduct(res.data.data);
@@ -48,7 +48,7 @@ export default function Details() {
                                     <img src="http://demo.odms.in/greenaqua/static/media/producttwo.d0aa7fe13de8f02968e2.jpg" alt="Pineapple" className='img-fulid details-img' />
                                     {/* {product?.featured?.map((productimg) => (
                                         <div className='pro-det-img' key={productimg.id}>
-                                            <img src={'http://127.0.0.1:8000/'+ productimg.featured.original} alt='greenAqua' className='img-fulid details-img' />
+                                            <img src={'http://3.111.169.240/'+ productimg.featured.original} alt='greenAqua' className='img-fulid details-img' />
                                         </div>
                                     ))} */}
 

@@ -34,7 +34,7 @@ export default function Header() {
   }, []);
   const fetchProducts = () => {
     axios
-      .get(`/api/ga/${params.id}/products`)
+      .get(`http://3.111.169.240/api/ga/${params.id}/products`)
       .then((res) => {
         console.log(res);
         setProducts(res.data.data?.data ?? []);
@@ -117,17 +117,16 @@ export default function Header() {
                       Products
                     </Nav.Link>
                     <ul className="dropdown-chaild">
-                      {
+                      {/* {
                         headerLink.map((headeritem) => {
                           return (
                             <li key={headeritem.id}>
-                              {/* <Link to={`/products/${headeritem.id}`}>{headeritem.name}</Link> */}
                               <a href={`/products/${headeritem.id}`}>{headeritem.name}</a>
                               <ul>
-                                {/* <li><Link to="/ProductDetails">Sewage Treatment plants</Link></li>
+                                <li><Link to="/ProductDetails">Sewage Treatment plants</Link></li>
                                 <li><Link to="/ProductDetails">Packages STP</Link></li>
                                 <li><Link to="/ProductDetails">Effluent Treatment Plants</Link></li>
-                                <li><Link to="/ProductDetails">Packages ETP</Link></li> */}
+                                <li><Link to="/ProductDetails">Packages ETP</Link></li>
                                 {products.map((mainproduct) => (
                                   <li key={mainproduct.id}><Link to="/Details">{mainproduct.name}</Link></li>
                                 ))}
@@ -135,18 +134,18 @@ export default function Header() {
                             </li>
                           )
                         })
-                      }
+                      } */}
 
-                      {/* <li><Link to="/ProductCategories">Water Vending Station</Link></li>
-                        <li><Link to="/ProductCategories">Wastewater Treatment</Link>
-                          <ul>
-                            <li><Link to="/ProductDetails">Sewage Treatment plants</Link></li>
-                            <li><Link to="/ProductDetails">Packages STP</Link></li>
-                            <li><Link to="/ProductDetails">Effluent Treatment Plants</Link></li>
-                            <li><Link to="/ProductDetails">Packages ETP</Link></li>
-                          </ul>
-                        </li>
-                        <li><Link to="/ProductCategories">Industrial Water Solutions </Link>
+                      {
+                        headerLink.map((headeritem) => {
+                          return (
+                              <li key={headeritem.id}>
+                                 <Link to={`/products/${headeritem.id}`}>{headeritem.name}</Link>
+                              </li>
+                        )
+                        })
+                      }
+                        {/* <li><Link to="/ProductCategories">Industrial Water Solutions </Link>
                           <ul>
                             <li><Link to="/ProductDetails">Industrial Reverse Osmosis (RO) Plants</Link></li>
                             <li><Link to="/ProductDetails">Ultra Filtration Plant</Link></li>
