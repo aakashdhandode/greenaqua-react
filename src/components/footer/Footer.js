@@ -37,7 +37,7 @@ export default function Footer() {
                      <div className="footer-logo">
                         <Image src={require('../../assets/images/logo.png')} className='img-fluid' />
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus molestiae, in aspernatur
-                         distinctio eveniet neque excepturi numquam</p>
+                           distinctio eveniet neque excepturi numquam</p>
                      </div>
                      <div className='footer-links'>
                         <div className="footer-social-icons mt-3">
@@ -63,22 +63,43 @@ export default function Footer() {
                            <li>
                               <i className="fal fa-chevron-right"></i>
                               <Link to="/About">
-                                 About</Link>
+                                 About Us</Link>
+                           </li>
+                           <li>
+                              <i className="fal fa-chevron-right"></i>
+                              <Link to="/products">
+                                 Our Products</Link>
                            </li>
                            <li>
                               <i className="fal fa-chevron-right"></i>
                               <Link to="/Services">
-                                 Services</Link>
+                                 Our Services</Link>
+                           </li>
+                           <li>
+                              <i className="fal fa-chevron-right"></i>
+                              <Link to="/Careers">
+                                 Careers</Link>
+                           </li>
+
+                           <li>
+                              <i className="fal fa-chevron-right"></i>
+                              <Link to="/Gallery">
+                                 Gallery</Link>
+                           </li>
+                           <li>
+                              <i className="fal fa-chevron-right"></i>
+                              <Link to="/clients">
+                             Our Clients</Link>
+                           </li>
+                           <li>
+                              <i className="fal fa-chevron-right"></i>
+                              <Link to="/downloads">
+                              Brouchers</Link>
                            </li>
                            <li>
                               <i className="fal fa-chevron-right"></i>
                               <Link to="/Contact">
                                  Contact Us</Link>
-                           </li>
-                           <li>
-                              <i className="fal fa-chevron-right"></i>
-                              <Link to="/Gallery">
-                                 Gallery</Link>
                            </li>
                         </ul>
                      </div>
@@ -106,14 +127,20 @@ export default function Footer() {
                         <div className="footer-address-info-item mt-2">
                            <p className="footer-physical-address"> #204, Sahiti petals, 2nd street
                               Patrika Nagar,Hitech City, Madhapur
-                              Hyderabad - 500 081
+                              Hyderabad - <br />500 081
                               Telangana State, India
                            </p>
                         </div>
                         <div className="footer-address-info-item">
                            <p className="footer-contact-number">
                               Phone :
-                              <Link to=""> +91 040 233 233 33</Link>
+                              <Link to=""> +91 94914 48686</Link>
+                           </p>
+                        </div>
+                        <div className="footer-address-info-item">
+                           <p className="footer-contact-number">
+                              Landline :
+                              <Link to="">  040 233 233 33</Link>
                            </p>
                         </div>
                         <div className="footer-address-info-item">
@@ -137,63 +164,65 @@ export default function Footer() {
          </div>
 
          <div className="wf-pop" onClick={handleShow}>
-            <Image src={require('../../assets/images/req.png')} />
+            <Image src={require('../../assets/images/getq.png')} />
          </div>
 
          <div className="container-fluid">
             <div className="">
                {/* wataspp */}
                <div className="follow-whatsapp">
-                  <a href="https://web.whatsapp.com/send?phone=+919289375566 &amp;text=Towards the creation of a home for your dream"
+                  <a href="https://web.whatsapp.com/send?phone=+919491448686 &amp;text=Towards the creation xof a home for your dream"
                      title="Contact Us On WhatsApp" target="_blank"> <i className="fab fa-whatsapp"></i></a>
                </div>
                {/* phone */}
                <div className="follow-facebook">
-                  <a href="tel:+919289375566" title="Contact Us On facebook" target="_blank"> <i className="fa fa-phone"></i></a>
+                  <a href="tel:+919491448686" title="Contact Us On facebook" target="_blank"> <i className="fa fa-phone"></i></a>
                </div>
                {/* email */}
                <div className="follow-instagram">
-                  <a href="mailto: info@mypropindia.com" title="Contact Us On instagram" target="_blank"> <i className="fa fa-envelope"></i></a>
+                  <a href="mailto: contact@greenaqua.in" title="Contact Us On instagram" target="_blank"> <i className="fa fa-envelope"></i></a>
                </div>
             </div>
          </div>
 
 
-         <Modal
-            show={show}
-            onHide={handleClose}
-            backdrop="static"
-            keyboard={false}
-            className="pop-up"
-            centered
-            dialogClassName="modal-90w"
-         >
-            <Modal.Header closeButton>
-               <Modal.Title>Request A Call Back</Modal.Title>
-            </Modal.Header>
-            <Modal.Body>
-               <Form className=''>
-                  <Form.Group className="">
-                     <Form.Control type="text" className='input-feild-height' placeholder="Enter Name" />
-                  </Form.Group>
-                  <Form.Group className="">
-                     <Form.Control type="text" className='input-feild-height' placeholder="Enter email" />
-                  </Form.Group>
-                  <Form.Group className="">
-                     <Form.Control type="text" className='input-feild-height' placeholder="Enter Company Name" />
-                  </Form.Group>
-                  <Form.Group className="">
-                     <Form.Control type="text" className='input-feild-height' placeholder="Enter Phone" />
-                  </Form.Group>
-                  <Form.Group className=""  >
-                     <textarea className="form-control" id="" rows="3" placeholder="Enter Message"></textarea>
-                  </Form.Group>
-                  <div className='text-center'>
-                     <Button variant="primary" type="submit" className='btn-theme-colored'>Send your message</Button>
-                  </div>
-               </Form>
-            </Modal.Body>
-         </Modal>
+         <div className="get-quets">
+            <Modal
+               show={show}
+               onHide={handleClose}
+               backdrop="static"
+               keyboard={false}
+               className="pop-up get-quets"
+               centered
+               dialogClassName="modal-20w"
+            >
+               <Modal.Header closeButton>
+                  <Modal.Title>Request A Call Back</Modal.Title>
+               </Modal.Header>
+               <Modal.Body>
+                  <Form className=''>
+                     <Form.Group className="">
+                        <Form.Control type="text" className='input-feild-height' placeholder="Enter Name" />
+                     </Form.Group>
+                     <Form.Group className="">
+                        <Form.Control type="text" className='input-feild-height' placeholder="Enter email" />
+                     </Form.Group>
+                     <Form.Group className="">
+                        <Form.Control type="text" className='input-feild-height' placeholder="Enter Company Name" />
+                     </Form.Group>
+                     <Form.Group className="">
+                        <Form.Control type="text" className='input-feild-height' placeholder="Enter Phone" />
+                     </Form.Group>
+                     <Form.Group className=""  >
+                        <textarea className="form-control" id="" rows="3" placeholder="Enter Message"></textarea>
+                     </Form.Group>
+                     <div className='text-center'>
+                        <Button variant="primary" type="submit" className='btn-theme-colored w-100'>Send your message</Button>
+                     </div>
+                  </Form>
+               </Modal.Body>
+            </Modal>
+         </div>
 
 
 

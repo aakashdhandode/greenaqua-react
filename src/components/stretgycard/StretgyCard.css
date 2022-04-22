@@ -55,7 +55,11 @@
     padding: 0!important;
   }
 .green-module p{
-    font-size: 15px;
+   font-size: 15px;
+  text-align: justify;
+  text-align-last: center;
+  word-spacing: -1px;
+
 }
 .green-module h4{
     padding: 16px 0 0 0;

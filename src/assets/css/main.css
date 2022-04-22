@@ -36,11 +36,11 @@ html, body{
     padding: 74px 0 44px 0;
 }
 .new-about-bg .offers-containt {
-    padding: 36px 126px 0px 9px;
+    padding: 36px 149px 0px 9px;
 }
 .new-about-bg img {
     width: 100%;
-    height: 418px;
+    height: 450px;
 }
 .offers-containt h3 {
     font-size: 30px;
@@ -382,7 +382,7 @@ html, body{
 .font-weight-600 {
     font-weight: 600 !important;
     padding: 0 7px 0 0px;
-    font-size: 16px;
+    font-size: 14px;
 }
 .contact-details p{
     font-size: 14.5px;
@@ -607,6 +607,9 @@ html, body{
     .new-about-bg .offers-containt {
         padding: 36px 9px 0px 9px;
     }
+    .career-details-ptb {
+        padding: 11px 4px;
+    }   
     .follow-instagram {
         bottom: 3%;
         left: 4px;
@@ -779,11 +782,10 @@ html, body{
 }
 
 @media (min-width: 576px){
-.modal-dialog {
-    max-width: 410px;
-    margin: 1.75rem auto;
-}
-}
+    .get-quets .modal-dialog {
+        max-width: 410px!important;
+    }
+    }
 
 
 .explores{
@@ -852,10 +854,10 @@ html, body{
     padding: 17px 0 7px;
 }
 .div-padding .res-991-pb-0 p {
-    color: #000;
-    line-height: 23px!important;
-    text-align: center!important;
-
+    text-align: justify;
+    text-align-last: center;
+    padding: 0 11px;
+    font-size: 15px;
 }
 
 .home-ab-section {
@@ -911,23 +913,27 @@ html, body{
 .about-img-title.ait_2 {
     background: #fff;
     box-shadow: 1px 1px 1px #1d4c9f;
-    color: #1d4c9f;
+    color: #068b1e;
     left: auto;
     right: -60px;
 }
+.about-img-title.ait_2 span{
+    color: #1d4c9f;
+}
+
 .color-bg {
     background: #1d4c9f;
 }
 .about-img-title {
     background: #2d2d32;
     color: hsla(0,0%,100%,.71);
-    font-size: 11px;
+    font-size: 17px;
     font-weight: 600;
-    left: -120px;
-    letter-spacing: 6px;
-    padding: 15px 85px;
+    /* left: -120px; */
+    letter-spacing: 3px;
+    padding: 11px 83px;
     position: absolute;
-    text-transform: uppercase;
+    font-weight: 600;
     top: 80px;
     z-index: 23;
 }

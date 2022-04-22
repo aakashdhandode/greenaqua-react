@@ -45,7 +45,7 @@ export default function Details() {
                             <Row>
                                 <div className='pro-details-sec'>
 
-                                    <img src="http://demo.odms.in/greenaqua/static/media/producttwo.d0aa7fe13de8f02968e2.jpg" alt="Pineapple" className='img-fulid details-img' />
+                                    <Image src={require('../assets/images/pro1.jpg')} alt="product image" className='img-fulid details-img' />
                                     {/* {product?.featured?.map((productimg) => (
                                         <div className='pro-det-img' key={productimg.id}>
                                             <img src={'http://3.111.169.240/'+ productimg.featured.original} alt='greenAqua' className='img-fulid details-img' />

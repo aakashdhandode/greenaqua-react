@@ -13,6 +13,7 @@ import Downloads from './view/Downloads';
 import Products from './view/Products';
 import ProductsCategories from './view/ProductsCategories';
 import Details from './view/Details';
+import Careers from './view/Careers';
 
 
 class App extends Component {
@@ -34,6 +35,8 @@ class App extends Component {
               <Route exact path="/Details/:id" component={Details} />
               <Route exact path="/Downloads" component={Downloads} />
               <Route exact path="/Contact" component={Contact} />
+              <Route exact path="/Careers" component={Careers} />
+           
             </Switch>
             <Footer />
             </div>

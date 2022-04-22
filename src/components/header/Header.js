@@ -183,6 +183,11 @@ export default function Header() {
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item>
+                <Nav.Link eventKey="gallery" as={Link} to="/Careers">
+                Careers
+                </Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
                 <Nav.Link eventKey="gallery" as={Link} to="/gallery">
                   Gallery
                 </Nav.Link>

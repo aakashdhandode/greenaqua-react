@@ -25,7 +25,7 @@ class Popup extends React.Component {
   render() {
     return (
       <div>
-        <Modal dialogClassName="modal-90w" show={this.state.show} onHide={this.handleClose} centered  className="pop-up">
+        <Modal dialogClassName="modal-90w" show={this.state.show} onHide={this.handleClose} centered  className="pop-up get-quets">
           <Modal.Header closeButton>
           <Modal.Title>Request A Call Back</Modal.Title>
           </Modal.Header>
@@ -38,7 +38,7 @@ class Popup extends React.Component {
             <Form.Control type="text" className='input-feild-height' placeholder="Enter email" />
          </Form.Group>
          <Form.Group className="">
-            <Form.Control type="text" className='input-feild-height' placeholder="Enter Company Name" />
+            <Form.Control type="text" className='input-feild-height' placeholder="Location" />
          </Form.Group>
          <Form.Group className="">
             <Form.Control type="text" className='input-feild-height' placeholder="Enter Phone" />

@@ -1,0 +1,106 @@
+.career-title{
+    color: #fff;
+    background-color: #000d42;
+    color: #1a191d;
+    font-size: 15px;
+    text-transform: uppercase;
+    position: relative;
+    cursor: pointer;
+    border: 1px solid #e5e5e5;
+    background-image: url(../images/accordion-bar.png);
+}
+.career-title span{
+    line-height: 0;
+    color: white;
+    margin: 0;
+    font-weight: 500;
+    font-size: 14px;/* padding: 17px 0; */
+    font-size: 14px;
+}
+.career-title i{
+    background: #1d4c9f;
+    /* padding: 14px; */
+    padding: 17px 16px;
+    margin: 0 14px 0px 0px;
+    color: white;
+}
+.career-card{
+    border: 1px solid #9d9999;
+    margin-bottom: 52px;
+    border-top: none;
+    padding: 0px 0px;
+}
+.career-details-ptb{
+    padding: 40px 67px;
+}
+.career-details-ptb h4{
+    font-size: 19px;
+    font-weight: 600;
+}
+.career-details-ptb p{
+    font-size: 15px;
+    color: #3e3b3bfa;
+}
+.career-details-ptb ul{
+    list-style: none;
+    padding: 0px;
+}
+.career-details-ptb ul li i{
+    background: #1d4c9f;
+    color: white;
+    padding: 5px;
+    font-size: 8px;
+    border-radius: 20px;
+    margin: 0 12px 0 0;
+}
+.career-details-ptb ul li{
+    font-size: 15px;
+    color: #3e3b3bfa;
+    padding: 4px 0 9px 0;
+}
+.career-details-ptb button{
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    color: #fff;
+    padding: 0 28px;
+    line-height: 39px;
+    background: #0d194c;
+    border: none;
+    margin-top: 15px;
+}
+@media (min-width: 576px){
+    .lg-models .modal-dialog {
+        max-width: 700px;
+}
+}
+.lg-models .modal-header{
+    border: none!important;
+}
+.modal-header{
+    border: none;
+}
+.career-form .input-feild-height {
+ 
+    margin: 7px 0 26px 0;
+    font-size: 14px;
+    line-height: 11px;
+    border: none;
+    height: 42px!important;
+    border-bottom: 1px solid black;
+    border-radius: 0;
+
+}
+.career-form 
+.col-sm-6 {
+    padding: 0 4px;
+}
+.career-form{
+    padding: 6px 14px 5px !important;
+}
+.career-form .form-label{
+    margin-bottom: -0.5rem;
+    font-weight: 600;
+    font-size: 15px;
+}
+

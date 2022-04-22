@@ -44,7 +44,7 @@ export default function About() {
             <div className="col-md-5">
               <div className="about-img fl-wrap">
                    <Image src={require('../assets/images/homeabout.jpg')} className='about-imgg' />
-                <div className="about-img-title ait_2 color-bg">Green Aqua</div>
+                <div className="about-img-title ait_2 color-bg">Green<span>Aqua</span></div>
               </div>
             </div>
           </div>

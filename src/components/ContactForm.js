@@ -167,8 +167,11 @@ class ContactForm extends Component {
                                     Patrika Nagar,Hitech City,<br /> Madhapur
                                     Hyderabad - 500 081
                                     Telangana State, India</li>
-                                <li><i className="fa fa-phone text-white"></i><span className="font-weight-600">Phone:
-                                </span> +91 040 233 233 33</li>
+                                <li><i className="fa fa-mobile text-white"></i><span className="font-weight-600">Phone:
+                                </span> +91 94914 48686</li>
+
+                                <li><i className="fa fa-phone text-white"></i><span className="font-weight-600">Landline:
+                                </span> 040 233 233 33</li>
 
                                 <li><i className="fa fa-envelope text-white"></i><span className="font-weight-600">Email:
                                 </span>contact@greenaqua.in</li>
