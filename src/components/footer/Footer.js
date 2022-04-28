@@ -36,8 +36,9 @@ export default function Footer() {
                   <Col sm={4}>
                      <div className="footer-logo">
                         <Image src={require('../../assets/images/logo.png')} className='img-fluid' />
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus molestiae, in aspernatur
-                           distinctio eveniet neque excepturi numquam</p>
+                        {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus molestiae, in aspernatur
+                           distinctio eveniet neque excepturi numquam</p> */}
+                           <h5 className='text-white pt-4'>Green Aqua Enviro Projects Private Limited, Hyderabad, India.</h5>
                      </div>
                      <div className='footer-links'>
                         <div className="footer-social-icons mt-3">
@@ -127,7 +128,7 @@ export default function Footer() {
                         <div className="footer-address-info-item mt-2">
                            <p className="footer-physical-address"> #204, Sahiti petals, 2nd street
                               Patrika Nagar,Hitech City, Madhapur
-                              Hyderabad - <br />500 081
+                              Hyderabad - 500 081
                               Telangana State, India
                            </p>
                         </div>
@@ -202,19 +203,19 @@ export default function Footer() {
                <Modal.Body>
                   <Form className=''>
                      <Form.Group className="">
-                        <Form.Control type="text" className='input-feild-height' placeholder="Enter Name" />
+                        <Form.Control type="text" className='input-feild-height' placeholder="Name" />
                      </Form.Group>
                      <Form.Group className="">
-                        <Form.Control type="text" className='input-feild-height' placeholder="Enter email" />
+                        <Form.Control type="text" className='input-feild-height' placeholder="Email" />
                      </Form.Group>
                      <Form.Group className="">
-                        <Form.Control type="text" className='input-feild-height' placeholder="Enter Company Name" />
+                        <Form.Control type="text" className='input-feild-height' placeholder="Location" />
                      </Form.Group>
                      <Form.Group className="">
-                        <Form.Control type="text" className='input-feild-height' placeholder="Enter Phone" />
+                        <Form.Control type="text" className='input-feild-height' placeholder="Phone" />
                      </Form.Group>
                      <Form.Group className=""  >
-                        <textarea className="form-control" id="" rows="3" placeholder="Enter Message"></textarea>
+                        <textarea className="form-control" id="" rows="3" placeholder="Requirement"></textarea>
                      </Form.Group>
                      <div className='text-center'>
                         <Button variant="primary" type="submit" className='btn-theme-colored w-100'>Send your message</Button>

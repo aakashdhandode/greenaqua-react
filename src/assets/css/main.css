@@ -343,7 +343,13 @@ html, body{
     padding: 0 38px 0 29px;
 }
 .service-containt p{
-    font-size: 16px;
+    font-size: 15px;
+    text-align: justify;
+}
+.services-bgg{
+    /* background-color: #f8f9f9!important; */
+    padding-bottom: 51px;
+    padding-top: 66px;
 }
 .service-containt-img{
     width: 100%;
@@ -354,6 +360,44 @@ html, body{
 }
 .text-theme-colored{
     color:#1b54c5;
+}
+.apply-job{
+    font-size: 13px;
+    color: white;
+    background: #1d4c9f;
+    padding: 6px 13px;
+}
+.apply-job i{
+    font-size: 11px;
+    padding: 0 7px;
+}
+.ser-pr-bg{
+    background-color: white;
+    box-shadow: 0px 6px 16px #b5b5b5;
+    margin: 10px 0 31px 0;
+}
+.ser-pr-bg .descr h4{
+    color: #1d4c9f;
+    font-size: 21px;
+    font-weight: 500;
+    font-family: system-ui;
+    margin: 0;
+
+}
+.ser-pr-bg .descr p{
+      /* font-size: 15px; */
+      text-align: justify;
+      padding-top: 6px;
+      /* color: #606060; */
+      font-size: 15px;
+      color: #3e3b3bfa;
+}
+.ser-pr-bg img{
+    width: 100%;
+    height: 280px;
+}
+.ser-pr-bg .descr{
+    padding: 18px 19px;
 }
 .list-icon li {
     font-size: 14.5px;
@@ -610,12 +654,19 @@ html, body{
     .career-details-ptb {
         padding: 11px 4px;
     }   
+    .cmn-title {
+        text-align: justify!important;
+        padding: 0 1px!important;
+    }
     .follow-instagram {
         bottom: 3%;
         left: 4px;
         line-height: 0;
         height: 45px;
         width: 45px;
+    }
+    .apply-form {
+        padding: 15px 6px!important;
     }
     .follow-facebook {
         bottom: 10%;
@@ -805,12 +856,12 @@ html, body{
     margin: 10px 0;
 }
 
-.image-card img {
+/* .image-card img {
   -webkit-transition: 0.4s ease;
   transition: 0.4s ease;
   width: 100%;
   height: 254px;
-}
+} */
 
 .zoom-effect-container:hover .image-card img {
   -webkit-transform: scale(1.08);
@@ -950,4 +1001,24 @@ html, body{
 }
 .c-d-p{
     font-size: 14.5px;
+}
+.inquiry-section{
+    position: relative;
+    display: block;
+    width: 100%;
+    padding-bottom: 115px;
+    margin: 418px 0 0;
+}
+.inquiry-section:before {
+    content: '';
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: url(https://www.hiddenbrains.com/public/local-cdn/images/current-openings-details-inquirey-bg.png) no-repeat center;
+    background-size: cover;
+}
+.apply-form{
+    padding: 38px 201px;
 }

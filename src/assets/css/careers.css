@@ -31,7 +31,8 @@
     padding: 0px 0px;
 }
 .career-details-ptb{
-    padding: 40px 67px;
+    padding: 19px 28px;
+    text-align: justify;
 }
 .career-details-ptb h4{
     font-size: 19px;
@@ -59,15 +60,15 @@
     padding: 4px 0 9px 0;
 }
 .career-details-ptb button{
-    font-size: 14px;
+    font-size: 11px;
     text-transform: uppercase;
-    letter-spacing: .08em;
+    letter-spacing: 0.01em;
     color: #fff;
-    padding: 0 28px;
-    line-height: 39px;
+    padding: 0 20px;
+    line-height: 33px;
     background: #0d194c;
     border: none;
-    margin-top: 15px;
+    margin-top: 4px;
 }
 @media (min-width: 576px){
     .lg-models .modal-dialog {
@@ -96,11 +97,38 @@
     padding: 0 4px;
 }
 .career-form{
-    padding: 6px 14px 5px !important;
+    padding: 30px 27px 60px !important;
+    background-clip: padding-box;
+    border-radius: 0.3rem;
 }
 .career-form .form-label{
     margin-bottom: -0.5rem;
     font-weight: 600;
     font-size: 15px;
 }
-
+.car-app{
+    padding: 78px 0 66px;
+}
+.ca-m-t{
+    display: block;
+    margin: 0;
+    font-weight: 600;
+    font-size: 29px;
+    /* line-height: 42px; */
+    color: var(--lightblack);
+    /* font-family: var(--font-family-bold); */
+    /* font-weight: normal; */
+    padding: 0px;
+    text-align: center;
+}
+.cmn-title{
+    text-align: center;
+    display: block;
+    margin: 15px 0 0 0;
+    padding: 0 165px;
+    font-size: 22px;
+    line-height: 32px;
+    color: var(--light-grey);
+    font-family: var(--font-family-regular);
+    font-weight: normal;
+}

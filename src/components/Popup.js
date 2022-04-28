@@ -32,19 +32,19 @@ class Popup extends React.Component {
           <Modal.Body>
       <Form className=''>
          <Form.Group className="">
-            <Form.Control type="text" className='input-feild-height' placeholder="Enter Name" />
+            <Form.Control type="text" className='input-feild-height' placeholder="Name" />
          </Form.Group>
          <Form.Group className="">
-            <Form.Control type="text" className='input-feild-height' placeholder="Enter email" />
+            <Form.Control type="text" className='input-feild-height' placeholder="Email" />
          </Form.Group>
          <Form.Group className="">
             <Form.Control type="text" className='input-feild-height' placeholder="Location" />
          </Form.Group>
          <Form.Group className="">
-            <Form.Control type="text" className='input-feild-height' placeholder="Enter Phone" />
+            <Form.Control type="text" className='input-feild-height' placeholder="Phone" />
          </Form.Group>
          <Form.Group className=""  >
-            <textarea className="form-control" id="" rows="3" placeholder="Enter Message"></textarea>
+            <textarea className="form-control" id="" rows="3" placeholder="Requirement"></textarea>
          </Form.Group>
          <div className='text-center'>
          <Button variant="primary" type="submit" className='btn-theme-colored'>Send your message</Button>

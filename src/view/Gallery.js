@@ -71,7 +71,7 @@ export default function Gallery() {
                                     <Image src={require('../assets/images/f2.png')} className='img-fluid margni-ft-img' />
                                 </Col>
                                 <Col lg={9} xs={9} className="footer-section-containt">
-                                    <h1>We Help Industry To Utilize The Heavy Equipment Work Better</h1>
+                                    <h1>We Help Industry To Utilize The  Equipment Work Better</h1>
                                 </Col>
                             </Row>
                         </Col>

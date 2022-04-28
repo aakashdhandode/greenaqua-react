@@ -19,7 +19,7 @@ class EnquiryForm extends Component {
     }
     saveStudent = async (e) => {
         e.preventDefault();
-        const res = await axios.post('/api/ga/contact', this.state);
+        const res = await axios.post('http://3.111.169.240/api/ga/contact', this.state);
         if (res.data.sttus === 200) {
             console.log(res.data.message)
             this.setState({
@@ -41,19 +41,19 @@ class EnquiryForm extends Component {
                     
                     <div className='input-padd'>
                     <Form.Group>
-                        <Form.Control type="text" name="name" onChange={this.handleInput} value={this.state.name} className='input-feild-height' placeholder="Enter Name" />
+                        <Form.Control type="text" name="name" onChange={this.handleInput} value={this.state.name} className='input-feild-height' placeholder=" Name" />
                     </Form.Group>
                     <Form.Group>
-                        <Form.Control type="text" name="email" onChange={this.handleInput} value={this.state.email} className='input-feild-height' placeholder="Enter Email" />
+                        <Form.Control type="text" name="email" onChange={this.handleInput} value={this.state.email} className='input-feild-height' placeholder="Email" />
                     </Form.Group>
                     <Form.Group>
-                        <Form.Control type="text" name="phone" onChange={this.handleInput} value={this.state.phone} className='input-feild-height' placeholder="Enter Phone" />
+                        <Form.Control type="text" name="phone" onChange={this.handleInput} value={this.state.phone} className='input-feild-height' placeholder="Phone" />
                     </Form.Group>
                     <Form.Group>
-                        <Form.Control type="text" name="company" onChange={this.handleInput} value={this.state.company} className='input-feild-height' placeholder="Company" />
+                        <Form.Control type="text" name="company" onChange={this.handleInput} value={this.state.company} className='input-feild-height' placeholder="Location" />
                     </Form.Group>
                     <Form.Group>
-                        <textarea className="form-control" name="message" onChange={this.handleInput} value={this.state.message} rows="4" placeholder="Enter Message"></textarea>
+                        <textarea className="form-control" name="message" onChange={this.handleInput} value={this.state.message} rows="4" placeholder="Requirement"></textarea>
                     </Form.Group>
                     <Button variant="primary" type="submit" className='btn-theme-colored'>Send your message</Button>
                     </div>

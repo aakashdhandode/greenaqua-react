@@ -1,11 +1,27 @@
-import React from 'react';
+//  
+
+import React, { useState, useEffect } from 'react';
 import { Col, Container, Row, Image } from 'react-bootstrap';
-import serviceone from "../assets/images/avimg.jpg";
-import serviceimgtwo from "../assets/images/avimg2.jpg";
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
+import axios from 'axios';
 import ClientSlider from '../components/clientlogo/ClientSlider';
 
 export default function Services() {
+    const [products, setProducts] = useState([]);
+    useEffect(() => {
+      fetchProducts();
+    }, []);
+    const fetchProducts = () => {
+      axios
+        .get('http://127.0.0.1:8000/api/ga/services')
+        .then((res) => {
+          console.log(res);
+          setProducts(res.data.data);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    };
   return (
     <>
     
@@ -18,49 +34,40 @@ export default function Services() {
             </div>
           </Container>
         </section>
-        <section className='main-service-box'>
+        {/* <section className='main-service-box'>
           <Container>
               <Row>
+              {products.map((mainproduct) => (
                  <Col sm={6} className='service-containt'>
-                   <h2>Operation and Maintenance of STP-ETP</h2>
-                   <p>Green Aqua undertakes operation &amp; maintenance, annual maintenance contracts for all WATER AND WASTE
-                             WATER TREATMENT PLANTS Which includes STp, ETp, RO plants, Desalination plants, water softeners etc.
-                            We have vast experience in providing AMC, Operation &amp; Maintenance Services for Effluent and Sewage 
-                            treatments (E.T.P./S.T.P), Water treatment plats( ETP) to many industries, govt.sectors, residential 
-                            colonies etc.
-                            Our maintenace staff are well versed with operating and maintenance procedures of the plants. 
-                            Our services are available round the clock for operation, break down service .</p>
-                            <ul>
-                                <li>We charge optimum</li>
-                                <li>We serve 365/24/7</li>
-                                <li>Maintenace of records for accurate results</li>
-                                <li>Expert professionals to take care of each problem</li>
-                            </ul>
+                    <div className=''>
+                    <h2>{mainproduct.title}</h2>
+                   <p>{mainproduct.description}</p>
+                    </div> 
+                    <div>
+                    <img src={'http://127.0.0.1:8000/' + mainproduct.logo.original} alt='greenAqua' className='img-fluid'/>
+                    </div>                                 
                  </Col>
-                 <Col sm={6} className="p-0">
-                     <img src={serviceone} className="img-fluid service-containt-img" alt="greenaqua" />
-                 </Col>
-                 <Col sm={6} className="p-0">
-                     <img src={serviceimgtwo} className="img-fluid service-containt-img" alt="greenaqua" />
-                 </Col>
-                 <Col sm={6} className='service-containt'>
-                   <h2>Operation and Maintenance of STP-ETP</h2>
-                   <p>Green Aqua undertakes operation &amp; maintenance, annual maintenance contracts for all WATER AND WASTE
-                             WATER TREATMENT PLANTS Which includes STp, ETp, RO plants, Desalination plants, water softeners etc.
-                            We have vast experience in providing AMC, Operation &amp; Maintenance Services for Effluent and Sewage 
-                            treatments (E.T.P./S.T.P), Water treatment plats( ETP) to many industries, govt.sectors, residential 
-                            colonies etc.
-                            Our maintenace staff are well versed with operating and maintenance procedures of the plants. 
-                            Our services are available round the clock for operation, break down service .</p>
-                            <ul>
-                                <li>We charge optimum</li>
-                                <li>We serve 365/24/7</li>
-                                <li>Maintenace of records for accurate results</li>
-                                <li>Expert professionals to take care of each problem</li>
-                            </ul>
-                 </Col>
+                  ))}
               </Row>
           </Container>
+        </section> */}
+        <section className='services-bgg'>
+            <Container>
+                <Row>
+                {products.map((mainproduct) => (
+                    <Col sm={6}>
+                        <div className='ser-pr-bg'>
+                           <img src={'http://127.0.0.1:8000/' + mainproduct.logo.original} alt='greenAqua' className='img-fluid'/>
+                           <div className='descr'>
+                           <h4>{mainproduct.title}</h4>
+                            <p>{mainproduct.description}</p>
+                           </div>
+                        </div>
+                    </Col>
+                    
+                    ))}
+                </Row>
+            </Container>
         </section>
         <section className="footer-contact">
             <Container>
@@ -71,7 +78,7 @@ export default function Services() {
                             <Image  src={require('../assets/images/f2.png')} className='img-fluid margni-ft-img' />
                             </Col>
                             <Col lg={9} xs={9}  className="footer-section-containt">
-                                <h1>We Help Industry To Utilize The Heavy Equipment Work Better</h1>
+                                <h1>We Help Industry To Utilize The  Equipment Work Better</h1>
                             </Col>
                         </Row>
                     </Col>
