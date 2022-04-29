@@ -19,7 +19,7 @@ function Careers() {
     }, []);
     const fetchProducts = () => {
       axios
-        .get('http://127.0.0.1:8000/api/ga/careers')
+        .get('http://3.111.169.240/api/ga/careers')
         .then((res) => {
           console.log(res);
           setProducts(res.data.data);
@@ -46,7 +46,7 @@ function Careers() {
         formData.append("experience", experience);
         formData.append("message", message);
 
-        const res = await axios.post('http://127.0.0.1:8000/api/ga/career/apply', formData);
+        const res = await axios.post('http://3.111.169.240/api/ga/career/apply', formData);
         if (res.data.sttus === 200) {
             console.log(res.data.message)
             setName('')

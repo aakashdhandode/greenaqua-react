@@ -10,7 +10,7 @@
 //   let handleSubmit = async (e) => {
 //     e.preventDefault();
 //     try {
-//       let res = await fetch("http://127.0.0.1:8000/api/ga/career/apply", {
+//       let res = await fetch("http://3.111.169.240/api/ga/career/apply", {
 //         method: "POST",
 //         body: JSON.stringify({
 //           name: name,
@@ -126,7 +126,7 @@ class ApplyJob extends Component {
         formData.append("experience", this.state.experience);
         formData.append("message", this.state.message);
 
-        const res = await axios.post('http://127.0.0.1:8000/api/ga/career/apply', this.state);
+        const res = await axios.post('http://3.111.169.240/api/ga/career/apply', this.state);
         if (res.data.sttus === 200) {
             console.log(res.data.message)
             this.setState({
