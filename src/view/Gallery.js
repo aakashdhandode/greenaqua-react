@@ -11,7 +11,7 @@ export default function Gallery() {
     }, []);
     const fetchGallery = () => {
         axios
-            .get('http://3.111.169.240/api/ga/files/gallery/true')
+            .get('http://admin.greenaqua.in/api/ga/files/gallery/true')
             .then((res) => {
                 console.log(res);
                 setGallery(res.data.data);
@@ -41,7 +41,7 @@ export default function Gallery() {
                             <div className="zoom-effect-container">
                                 <div className="image-card">
                                     {/* <img src="https://superdevresources.com/wp-content/uploads/2014/12/lions.jpg" /> */}
-                                    <img src={'http://3.111.169.240/'+image.thumb} alt='greenAqua' />
+                                    <img src={'http://admin.greenaqua.in/'+image.thumb} alt='greenAqua' />
                                 </div>
                             </div>
                         </Col>

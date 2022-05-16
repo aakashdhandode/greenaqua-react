@@ -17,7 +17,7 @@ export default function Header() {
   }, []);
   const fetchHeaderCatLink = () => {
     axios
-      .get('http://3.111.169.240/api/ga/categories')
+      .get('http://admin.greenaqua.in/api/ga/categories')
       .then((res) => {
         setHeaderCatLink(res.data.data);
       })
@@ -33,7 +33,7 @@ export default function Header() {
   }, []);
   const fetchProducts = () => { 
     axios
-      .get(`http://3.111.169.240/api/ga/${params.id}/products`)
+    .get(`http://admin.greenaqua.in/api/ga/${params.id}/products`)
       .then((res) => {
         console.log(res);
         setProducts(res.data.data?.data ?? []);
@@ -120,30 +120,19 @@ export default function Header() {
                         headerLink.map((headeritem) => {
                           return (
                             <li key={headeritem.id}>
-                              <Link to={`/products/${headeritem.id}`}>{headeritem.name}</Link>
+                              <a href={`/products/${headeritem.id}`}>{headeritem.name}</a>
                               <ul>
-                                {/* <li><Link to="/ProductDetails">Sewage Treatment plants</Link></li>
-                                <li><Link to="/ProductDetails">Packages STP</Link></li>
-                                <li><Link to="/ProductDetails">Effluent Treatment Plants</Link></li>
-                                <li><Link to="/ProductDetails">Packages ETP</Link></li> */}
+                                {/* <li><Link to="/ProductDetails">Sewage Treatment plants</Link></li> */}
                                 {products.map((mainproduct) => (
-                                  <li key={mainproduct.id}><Link to={`/Details/${mainproduct.id}`}>{mainproduct.name}</Link></li>
+                                  <li key={mainproduct.id}>
+                                    <Link to={`/Details/${mainproduct.id}`}>{mainproduct.name}</Link>
+                                  </li>
                                 ))}
                               </ul>
                             </li>
                           )
                         })
                       }
-
-                      {/* {
-                        headerLink.map((headeritem) => {
-                          return (
-                              <li key={headeritem.id}>
-                                 <Link to={`/products/${headeritem.id}`}>{headeritem.name}</Link>
-                              </li>
-                           )
-                        })
-                      } */}
 
                     </ul>
                   </li>

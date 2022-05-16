@@ -8,7 +8,7 @@ export default function Contact() {
           <Container>
             <div className='pro-discription'>
                <h3>Contact</h3>
-               <p>sCheck out the categories below to find the right products and solutions for you. And, if you don't find what you're looking for, please contact us.</p>
+               <p>Check out the categories below to find the right products and solutions for you. And, if you don't find what you're looking for, please contact us.</p>
             </div>
           </Container>
         </section>

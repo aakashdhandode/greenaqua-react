@@ -53,16 +53,17 @@
     height: 197px;
 }
 .home-tab-product-card h3 {
-    padding: 8px 0 1px;
-    font-size: 15.5px;
-    margin: 0;
-    color: #0a1d68;
-    text-transform: capitalize;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
+    color: #0a1d68;
+    display: -webkit-box;
+    font-size: 16px;
+    margin: 0;
+    font-weight: 600;
+    overflow: hidden;
+    padding: 8px 0 1px;
+    text-overflow: ellipsis;
+    text-transform: capitalize;
 }
 .home-cat-slider{
     padding: 0 9px;

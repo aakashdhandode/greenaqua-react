@@ -16,7 +16,7 @@ export default function Footer() {
    }, []);
    const fetchFooterLink = () => {
       axios
-         .get('http://3.111.169.240/api/ga/categories')
+         .get('http://admin.greenaqua.in/api/ga/categories')
          .then((res) => {
             //  console.log(res);
             setFooterLink(res.data.data);
@@ -165,7 +165,7 @@ export default function Footer() {
          </div>
 
          <div className="wf-pop" onClick={handleShow}>
-            <Image src={require('../../assets/images/getq.png')} />
+            <Image src={require('../../assets/images/enqr.png')} />
          </div>
 
          <div className="container-fluid">
@@ -185,6 +185,8 @@ export default function Footer() {
                </div>
             </div>
          </div>
+
+
 
 
          <div className="get-quets">

@@ -81,7 +81,7 @@ export default function About() {
       {/* end main about us */}
 
       {/* Counters section */}
-      <section className='count-project count-text'>
+      {/* <section className='count-project count-text'>
         <Container>
           <Row>
             <Col lg={3} xs={3}>
@@ -102,7 +102,7 @@ export default function About() {
             </Col>
           </Row>
         </Container>
-      </section>
+      </section> */}
       {/* end counters section */}
 
       {/* Mission vision */}

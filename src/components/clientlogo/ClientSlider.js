@@ -15,7 +15,7 @@ function ClientSlider() {
   }, []);
   const fetchGallery = () => {
     axios
-      .get('http://3.111.169.240/api/ga/files/client/true')
+      .get('http://admin.greenaqua.in/api/ga/files/client/true')
       .then((res) => {
         setGallery(res.data.data);
       })
@@ -70,7 +70,7 @@ function ClientSlider() {
               /> */}
             {gallery.map((image) => (
               <div key={image.id} className="clentslogo-card">
-                <img src={'http://3.111.169.240/' + image.original} alt='greenAqua' />
+                <img src={'http://admin.greenaqua.in/' + image.original} alt='greenAqua' />
               </div>
             ))}
           </Slider>

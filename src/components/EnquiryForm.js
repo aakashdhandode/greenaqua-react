@@ -19,7 +19,7 @@ class EnquiryForm extends Component {
     }
     saveStudent = async (e) => {
         e.preventDefault();
-        const res = await axios.post('http://3.111.169.240/api/ga/contact', this.state);
+        const res = await axios.post('http://admin.greenaqua.in/api/ga/contact', this.state);
         if (res.data.sttus === 200) {
             console.log(res.data.message)
             this.setState({

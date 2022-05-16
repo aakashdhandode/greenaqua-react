@@ -12,7 +12,7 @@ export default function Downloads() {
     }, []);
     const fetchGallery = () => {
     axios
-        .get('http://3.111.169.240/api/ga/files/broucher/true')
+        .get('http://admin.greenaqua.in/api/ga/files/broucher/true')
         .then((res) => {
         // console.log(res);
         setDownloads(res.data.data);
@@ -39,7 +39,7 @@ export default function Downloads() {
                 {downloads.map((broucher) => (
                     <Col sm={3} key={broucher.id}>
                     <div className="work-pro text-center" >
-                        <a href={'http://3.111.169.240/'+broucher.original} download target="_blank">
+                        <a href={'http://admin.greenaqua.in/'+broucher.original} download target="_blank">
                           <h2>{broucher.name}</h2>
                           <Image  src={require('../assets/images/downbutton.jpg')} />
                        </a>

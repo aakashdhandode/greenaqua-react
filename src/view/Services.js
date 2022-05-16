@@ -13,7 +13,7 @@ export default function Services() {
     }, []);
     const fetchProducts = () => {
       axios
-        .get('http://3.111.169.240/api/ga/services')
+        .get('http://admin.greenaqua.in/api/ga/services')
         .then((res) => {
           console.log(res);
           setProducts(res.data.data);
@@ -44,7 +44,7 @@ export default function Services() {
                    <p>{mainproduct.description}</p>
                     </div> 
                     <div>
-                    <img src={'http://3.111.169.240/' + mainproduct.logo.original} alt='greenAqua' className='img-fluid'/>
+                    <img src={'http://admin.greenaqua.in/' + mainproduct.logo.original} alt='greenAqua' className='img-fluid'/>
                     </div>                                 
                  </Col>
                   ))}
@@ -57,7 +57,7 @@ export default function Services() {
                 {products.map((mainproduct) => (
                     <Col sm={6}>
                         <div className='ser-pr-bg'>
-                           <img src={'http://3.111.169.240/' + mainproduct.logo.original} alt='greenAqua' className='img-fluid'/>
+                           <img src={'http://admin.greenaqua.in/' + mainproduct.logo.original} alt='greenAqua' className='img-fluid'/>
                            <div className='descr'>
                            <h4>{mainproduct.title}</h4>
                             <p>{mainproduct.description}</p>

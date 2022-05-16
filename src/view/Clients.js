@@ -13,7 +13,7 @@ export default function Clients() {
   }, []);
   const fetchGallery = () => {
   axios
-      .get('http://3.111.169.240/api/ga/files/client/true')
+      .get('http://admin.greenaqua.in/api/ga/files/client/true')
       .then((res) => {
       // console.log(res);
       setGallery(res.data.data);
@@ -39,13 +39,13 @@ export default function Clients() {
                {gallery.map((image) => (
                  <Col sm={2} xs={6}>
                      <div className='clentslogo-card' key={image.id}>
-                     <img src={'http://3.111.169.240/'+image.original} alt='greenAqua' />
+                     <img src={'http://admin.greenaqua.in/'+image.original} alt='greenAqua' />
                       </div>
                    </Col>
                    ))}
                    {/* {gallery.map((image) => (
                      <div key={image.id}>
-                            <img src={'http://3.111.169.240/'+image.original} alt='greenAqua' />
+                            <img src={'http://admin.greenaqua.in/'+image.original} alt='greenAqua' />
                       </div> */}
                       
 

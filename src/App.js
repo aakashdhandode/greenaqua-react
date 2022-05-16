@@ -22,7 +22,7 @@ class App extends Component {
     return (
       <div>
        
-          <Router basename={"/"}>
+          <Router basename="aqua">
           <div>
             <Header />
             <Switch>
@@ -38,8 +38,6 @@ class App extends Component {
               <Route exact path="/Contact" component={Contact} />
               <Route exact path="/Careers" component={Careers} />
               <Route exact path="/ApplyJob" component={ApplyJob} />
-
-           
             </Switch>
             <Footer />
             </div>
