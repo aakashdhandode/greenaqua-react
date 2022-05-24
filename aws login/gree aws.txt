@@ -1,0 +1,18 @@
+pass:   JCcbT5)xt@gsnSdvzifzvWG9wV3T?6Ln
+publicDNS:   ec2-3-111-169-240.ap-south-1.compute.amazonaws.com
+username:  Administrator
+
+3.111.169.240
+738942883
+greenaqua@test.com
+
+aws login:
+id: Contact@greenaqua.in
+Password: Info@980
+
+
+http://admin.greenaqua.in/login
+Login
+id: vishnu+admin@odms.in
+pass:  12345678
+
