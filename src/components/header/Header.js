@@ -1,39 +1,40 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
 import { Container, Navbar, Nav, Col, Row, Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import logo from "../../assets/images/logo.png";
 import "./header.css";
-import axios from 'axios';
-import { useParams } from 'react-router-dom';
+import axios from "axios";
+import { useParams } from "react-router-dom";
 
 export default function Header() {
   // const [showDropdown, setShowDropd  own] = useState(false);
   const [active, setActive] = useState("home");
+  const [mainCategory, setMainCatLink] = useState([]);
+  const [subCategory, setProducts] = useState([]);
 
-  const [headerLink, setHeaderCatLink] = useState([]);
+
   useEffect(() => {
-    fetchHeaderCatLink();
+    fetchMainCatLink();
   }, []);
-  const fetchHeaderCatLink = () => {
+  const fetchMainCatLink = () => {
     axios
-      .get('http://admin.greenaqua.in/api/ga/categories')
+      .get("http://admin.greenaqua.in/api/ga/categories")
       .then((res) => {
-        setHeaderCatLink(res.data.data);
+        setMainCatLink(res.data.data);
       })
       .catch((err) => {
         console.log(err);
       });
-  };  
+  };
 
-  const [products, setProducts] = useState([]);
   const params = useParams();
   useEffect(() => {
     fetchProducts();
   }, []);
-  const fetchProducts = () => { 
+  const fetchProducts = () => {
     axios
-    .get(`http://admin.greenaqua.in/api/ga/${params.id}/products`)
+      .get(`http://admin.greenaqua.in/api/ga/${params.id}/products`)
       .then((res) => {
         console.log(res);
         setProducts(res.data.data?.data ?? []);
@@ -43,27 +44,38 @@ export default function Header() {
       });
   };
 
-
-
-
   return (
     <>
       <div className="top-header">
         <Container>
           <Row>
-            <Col sm={6} >
+            <Col sm={6}>
               <div className="name-mail">
-                <a href="/" target="_blank" rel=""  >Call: +91 040 233 233 33</a>
-                <a href="/" target="_blank" rel=""  >Email: contact@greenaqua.in</a>
+                <a href="/" target="_blank" rel="">
+                  Call: +91 040 233 233 33
+                </a>
+                <a href="/" target="_blank" rel="">
+                  Email: contact@greenaqua.in
+                </a>
               </div>
             </Col>
             <Col sm={6}>
               <div className="social-icons">
-                <a href="instagram.com" target="_blank" rel=""  ><i className="fab fa-instagram"></i></a>
-                <a href="facebook.com" target="_blank" rel=""  ><i className="fab fa-facebook-f"></i></a>
-                <a href="linkedin.com" target="_blank" rel=""  ><i className="fab fa-linkedin"></i></a>
-                <a href="youtube.com" target="_blank" rel=""  ><i className="fab fa-youtube"></i></a>
-                <a href="twitter.com" target="_blank" rel=""  ><i className="fab fa-twitter"></i></a>
+                <a href="instagram.com" target="_blank" rel="">
+                  <i className="fab fa-instagram"></i>
+                </a>
+                <a href="facebook.com" target="_blank" rel="">
+                  <i className="fab fa-facebook-f"></i>
+                </a>
+                <a href="linkedin.com" target="_blank" rel="">
+                  <i className="fab fa-linkedin"></i>
+                </a>
+                <a href="youtube.com" target="_blank" rel="">
+                  <i className="fab fa-youtube"></i>
+                </a>
+                <a href="twitter.com" target="_blank" rel="">
+                  <i className="fab fa-twitter"></i>
+                </a>
               </div>
             </Col>
           </Row>
@@ -79,10 +91,19 @@ export default function Header() {
               </Link>
             </Col>
             <Col sm={6} xs={8}>
-              <div className='text-end'>
-                <Image src={require('../../assets/images/iso.jpg')} className='partner-logo' />
-                <Image src={require('../../assets/images/nsic.png')} className='partner-logo' />
-                <Image src={require('../../assets/images/msme.png')} className='partner-logo pt-4' />
+              <div className="text-end">
+                <Image
+                  src={require("../../assets/images/iso.jpg")}
+                  className="partner-logo"
+                />
+                <Image
+                  src={require("../../assets/images/nsic.png")}
+                  className="partner-logo"
+                />
+                <Image
+                  src={require("../../assets/images/msme.png")}
+                  className="partner-logo pt-4"
+                />
               </div>
             </Col>
           </Row>
@@ -116,29 +137,40 @@ export default function Header() {
                       Products
                     </Nav.Link>
                     <ul className="dropdown-chaild">
-                      {
-                        headerLink.map((headeritem) => {
-                          return (
-                            <li key={headeritem.id}>
-                              <a href={`/products/${headeritem.id}`}>{headeritem.name}</a>
-                              <ul>
-                                {/* <li><Link to="/ProductDetails">Sewage Treatment plants</Link></li> */}
-                                {products.map((mainproduct) => (
-                                  <li key={mainproduct.id}>
-                                    <Link to={`/Details/${mainproduct.id}`}>{mainproduct.name}</Link>
-                                  </li>
-                                ))}
-                              </ul>
-                            </li>
-                          )
-                        })
-                      }
+                      {mainCategory.map((mainitem) => {
+                        return (
+                          <li key={mainitem.id}>
+                            <a href={`/products/${mainitem.id}`}>
+                              {mainitem.name}
+                            </a>
+                            <ul>
+                              {/* <li><Link to="/ProductDetails">Sewage Treatment plants</Link></li> */}
 
+                              {mainitem?.subcats?.map((subcat) => (
+                                <li key={subcat.id}>
+                                  <a href={`/Details/${subcat.id}`}>
+                                    {subcat.name}
+                                  </a>
+                                </li>
+                              ))}
+
+                              {subCategory.map((subcat) => (
+                                   <li key={subcat.id}>
+                                      <Link to={`/Details/${subcat.id}`}>
+                                        {subcat.name}
+                                      </Link>
+                                 </li>
+                              ))}
+
+                              
+                            </ul>
+                          </li>
+                        );
+                      })}
                     </ul>
                   </li>
                 </ul>
               </Nav.Item>
-
 
               <Nav.Item>
                 <Nav.Link eventKey="services" as={Link} to="/services">
@@ -147,7 +179,7 @@ export default function Header() {
               </Nav.Item>
               <Nav.Item>
                 <Nav.Link eventKey="gallery" as={Link} to="/Careers">
-                Careers
+                  Careers
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item>
@@ -170,22 +202,11 @@ export default function Header() {
         </Container>
       </Navbar>
 
-
-
-
-
       {/* 
       <div className="fixed-mobile">
          <Link to="/">Call Us : +91 1234567890</Link><br />
           <Link to="/">exaple@gmail.com</Link>
       </div> */}
-
-
-
-
-
-
-
     </>
   );
 }

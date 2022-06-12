@@ -27,7 +27,7 @@ export default function Products() {
       <section className='product-page-sub'>
         <Container>
           <div className='pro-discription'>
-            <h3>Our Products</h3>
+            <h3>Categories</h3>
             <p>Check out the categories below to find the right products and solutions for you. And, if you don't find what you're looking for, please contact us.</p>
           </div>
         </Container>

@@ -45,20 +45,14 @@ export default function Details() {
                             <Row>
                                 <div className='pro-details-sec'>
 
-                                    <Image src={require('../assets/images/pro1.jpg')} alt="product image" className='img-fulid details-img' />
+                                    {/* <Image src={require('../assets/images/pro1.jpg')} alt="product image" className='img-fulid details-img' /> */}
+                                  
                                     {/* {product?.featured?.map((productimg) => (
                                         <div className='pro-det-img' key={productimg.id}>
                                             <img src={'http://admin.greenaqua.in/'+ productimg.featured.original} alt='greenAqua' className='img-fulid details-img' />
                                         </div>
                                     ))} */}
-                                      {/* {product?.featured?.map((productimg) => (
-                                            <div>
 
-                                            </div>
-                                        ))} */}
-                                        {/* <img src={'http://admin.greenaqua.in/' + product.images.original} alt='greenAqua' /> */}
-                                        {/* <img src={'http://admin.greenaqua.in/storage/images/large-jtZvCvmKFwGlYCBl74qxkA8WCG1lkT1sar3q2FCR-1647063554.jpg '} className='img-fulid details-img' /> */}
-                                    
                                     <h3>{product.name}</h3>
                                     <p>{product.description}</p>
                                 </div>
