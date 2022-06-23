@@ -39,7 +39,7 @@ export default function Downloads() {
                 {downloads.map((broucher) => (
                     <Col sm={3} key={broucher.id}>
                     <div className="work-pro text-center" >
-                        <a href={'http://admin.greenaqua.in/'+broucher.original} download target="_blank">
+                        <a href={'/'+broucher.original} download target="_blank">
                           <h2>{broucher.name}</h2>
                           <Image  src={require('../assets/images/downbutton.jpg')} />
                        </a>

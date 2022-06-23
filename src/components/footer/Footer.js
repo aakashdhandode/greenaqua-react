@@ -68,7 +68,7 @@ export default function Footer() {
                            </li>
                            <li>
                               <i className="fal fa-chevron-right"></i>
-                              <Link to="/products">
+                              <Link to="/categories">
                                  Our Products</Link>
                            </li>
                            <li>
@@ -111,12 +111,16 @@ export default function Footer() {
                            <h3>Our Products</h3>
                         </div>
                         <ul className="footer-details footer-list">
-                           {footerLink.map((footeritem) => (
+                           {footerLink.map((footeritem) => {
+                              if(footeritem.parent_id == 0){
+                             return (
                               <li key={footeritem.id}>
-                                 <i className="fal fa-chevron-right"></i>
-                                 <Link to="/">{footeritem.name}</Link>
-                              </li>
-                           ))}
+                                    <i className="fal fa-chevron-right"></i>
+                                    <Link to={`/category/${footeritem.id}`}>{footeritem.name}</Link>
+                                 </li>
+                              )
+                              }
+                           })}
                         </ul>
                      </div>
                   </Col>

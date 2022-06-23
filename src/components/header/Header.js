@@ -11,11 +11,13 @@ export default function Header() {
   // const [showDropdown, setShowDropd  own] = useState(false);
   const [active, setActive] = useState("home");
   const [mainCategory, setMainCatLink] = useState([]);
+  const [services, setServices] = useState([]);
   const [subCategory, setProducts] = useState([]);
 
 
   useEffect(() => {
     fetchMainCatLink();
+    fetchServices();
   }, []);
   const fetchMainCatLink = () => {
     axios
@@ -28,20 +30,33 @@ export default function Header() {
       });
   };
 
+  const fetchServices = () => {
+    axios
+      .get("http://admin.greenaqua.in/api/ga/categories/service")
+      .then((res) => {
+        setServices(res.data.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   const params = useParams();
   useEffect(() => {
     fetchProducts();
   }, []);
   const fetchProducts = () => {
-    axios
-      .get(`http://admin.greenaqua.in/api/ga/${params.id}/products`)
-      .then((res) => {
-        console.log(res);
-        setProducts(res.data.data?.data ?? []);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    if(params.id){
+      axios
+        .get(`http://admin.greenaqua.in/api/ga/${params.id}/products`)
+        .then((res) => {
+          console.log(res);
+          setProducts(res.data.data?.data ?? []);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    }
   };
 
   return (
@@ -118,6 +133,12 @@ export default function Header() {
               activeKey={active}
               onSelect={(selectedKey) => setActive(selectedKey)}
             >
+               <Nav.Item>
+                <Nav.Link eventKey="home" as={Link} to="/">
+                  &nbsp;
+                </Nav.Link>
+              </Nav.Item>
+              
               <Nav.Item>
                 <Nav.Link eventKey="home" as={Link} to="/">
                   Home
@@ -133,34 +154,34 @@ export default function Header() {
               <Nav.Item>
                 <ul className="dropdown">
                   <li>
-                    <Nav.Link eventKey="products" as={Link} to="/products">
+                    <Nav.Link eventKey="products" as={Link} to="/categories">
                       Products
                     </Nav.Link>
                     <ul className="dropdown-chaild">
                       {mainCategory.map((mainitem) => {
                         return (
                           <li key={mainitem.id}>
-                            <a href={`/products/${mainitem.id}`}>
+                            <Link to={`/category/${mainitem.id}`}>
                               {mainitem.name}
-                            </a>
+                            </Link>
                             <ul>
                               {/* <li><Link to="/ProductDetails">Sewage Treatment plants</Link></li> */}
 
                               {mainitem?.subcats?.map((subcat) => (
                                 <li key={subcat.id}>
-                                  <a href={`/Details/${subcat.id}`}>
+                                  <Link to={`/category/${subcat.id}`}>
                                     {subcat.name}
-                                  </a>
+                                  </Link>
                                 </li>
                               ))}
 
-                              {subCategory.map((subcat) => (
+                              {/* {subCategory.map((subcat) => (
                                    <li key={subcat.id}>
                                       <Link to={`/Details/${subcat.id}`}>
                                         {subcat.name}
                                       </Link>
                                  </li>
-                              ))}
+                              ))} */}
 
                               
                             </ul>
@@ -173,9 +194,45 @@ export default function Header() {
               </Nav.Item>
 
               <Nav.Item>
-                <Nav.Link eventKey="services" as={Link} to="/services">
-                  Services
-                </Nav.Link>
+                <ul className="dropdown">
+                  <li>
+                    <Nav.Link eventKey="products" as={Link} to="/categories">
+                      Services
+                    </Nav.Link>
+                    <ul className="dropdown-chaild">
+                      {services.map((mainitem) => {
+                        return (
+                          <li key={mainitem.id}>
+                            <Link to={`/category/${mainitem.id}`}>
+                              {mainitem.name}
+                            </Link>
+                            <ul>
+                              {/* <li><Link to="/ProductDetails">Sewage Treatment plants</Link></li> */}
+
+                              {mainitem?.subcats?.map((subcat) => (
+                                <li key={subcat.id}>
+                                  <Link to={`/category/${subcat.id}`}>
+                                    {subcat.name}
+                                  </Link>
+                                </li>
+                              ))}
+
+                              {/* {subCategory.map((subcat) => (
+                                   <li key={subcat.id}>
+                                      <Link to={`/Details/${subcat.id}`}>
+                                        {subcat.name}
+                                      </Link>
+                                 </li>
+                              ))} */}
+
+                              
+                            </ul>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  </li>
+                </ul>
               </Nav.Item>
               <Nav.Item>
                 <Nav.Link eventKey="gallery" as={Link} to="/Careers">

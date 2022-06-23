@@ -65,9 +65,9 @@ function ProductsCat() {
       {products.map((mainproduct) => (
         <div key={mainproduct.id}>
           <div className='home-cat-slider'>
-            <Link to={`/products/${mainproduct.id}`}>
+            <Link to={`/category/${mainproduct.id}`}>
               <div className='home-tab-product-card pro-height'>
-                <img src={'http://admin.greenaqua.in/' + mainproduct.images.original} alt='greenAqua' />
+                <img src={'/' + mainproduct.images.original} alt='g' />
                 <h3>{mainproduct.name}</h3>
               </div>
             </Link>

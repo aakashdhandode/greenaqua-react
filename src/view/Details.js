@@ -12,7 +12,7 @@ export default function Details() {
     const params = useParams();
     useEffect(() => {
         fetchProducts();
-    }, []);
+    }, params.id);
     const fetchProducts = () => {
         axios
             .get(`http://admin.greenaqua.in/api/ga/product/${params.id}`)
@@ -49,7 +49,7 @@ export default function Details() {
                                   
                                     {/* {product?.featured?.map((productimg) => (
                                         <div className='pro-det-img' key={productimg.id}>
-                                            <img src={'http://admin.greenaqua.in/'+ productimg.featured.original} alt='greenAqua' className='img-fulid details-img' />
+                                            <img src={'/'+ productimg.featured.original} alt='greenAqua' className='img-fulid details-img' />
                                         </div>
                                     ))} */}
 

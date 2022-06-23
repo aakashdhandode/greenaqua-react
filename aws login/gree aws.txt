@@ -11,7 +11,7 @@ id: Contact@greenaqua.in
 Password: Info@980
 
 
-http://admin.greenaqua.in/login
+/login
 Login
 id: vishnu+admin@odms.in
 pass:  12345678

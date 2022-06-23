@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, withRouter } from "react-router-dom";
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import Home from './view/Home';
@@ -22,22 +22,22 @@ class App extends Component {
     return (
       <div>
        
-          <Router basename="aqua">
+          <Router>
           <div>
             <Header />
             <Switch>
               <Route exact path="/" component={Home}/>
-              <Route exact path="/About" component={About} />
-              <Route exact path="/Services" component={Services} />
-              <Route exact path="/Clients" component={Clients} />
-              <Route exact path="/Gallery" component={Gallery} />
-              <Route exact path="/Products" component={Products} />
-              <Route exact path="/Products/:id"  component={ProductsCategories} />
-              <Route exact path="/Details/:id" component={Details} />
-              <Route exact path="/Downloads" component={Downloads} />
-              <Route exact path="/Contact" component={Contact} />
-              <Route exact path="/Careers" component={Careers} />
-              <Route exact path="/ApplyJob" component={ApplyJob} />
+              <Route path="/About" component={About} />
+              <Route path="/Services" component={Services} />
+              <Route path="/Clients" component={Clients} />
+              <Route path="/Gallery" component={Gallery} />
+              <Route exact path="/categories" component={Products} />
+              <Route exact path="/category/:id"  component={ProductsCategories} />
+              <Route path="/details/:id" component={Details} />
+              <Route path="/Downloads" component={Downloads} />
+              <Route path="/Contact" component={Contact} />
+              <Route path="/Careers" component={Careers} />
+              <Route path="/ApplyJob" component={ApplyJob} />
             </Switch>
             <Footer />
             </div>

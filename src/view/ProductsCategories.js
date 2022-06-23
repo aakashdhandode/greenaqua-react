@@ -10,7 +10,7 @@ export default function ProductsCategories() {
   const params = useParams();
   useEffect(() => {
     fetchProducts();
-  }, []);
+  }, params.id);
   const fetchProducts = () => {
     axios
       .get(`http://admin.greenaqua.in/api/ga/${params.id}/products`)
@@ -40,11 +40,11 @@ export default function ProductsCategories() {
             {products.map((mainproduct) => (
               <Col sm={3} key={mainproduct.id}>
                 <div className='home-tab-product-card'>
-                <Link to={`/Details/${mainproduct.id}`}>
-                  <img src={'http://admin.greenaqua.in/' + mainproduct.featured.original} alt='greenAqua' />
+                <Link to={`/details/${mainproduct.id}`}>
+                  <img src={'/' + mainproduct.featured.original} alt='greenAqua' />
                   <h3>{mainproduct.name}</h3>
                   <p>{mainproduct.description}</p>
-                  <Link to={`/Details/${mainproduct.id}`}>More..</Link>
+                  <Link to={`/details/${mainproduct.id}`}>More..</Link>
                   </Link>
                 </div>
               </Col>

@@ -39,9 +39,9 @@ export default function Products() {
           <Row>
             {products.map((mainproduct) => (
               <Col sm={3} key={mainproduct.id}>
-                <Link to={`/products/${mainproduct.id}`}>
+                <Link to={`/category/${mainproduct.id}`}>
                   <div className='home-tab-product-card pro-height'>
-                    <img src={'http://admin.greenaqua.in/' + mainproduct.images.original} alt='greenAqua' />
+                    <img src={'/' + mainproduct.images.original} alt='greenAqua' />
                     <h3>{mainproduct.name}</h3>
                   </div>
                 </Link>
