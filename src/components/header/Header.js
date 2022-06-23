@@ -167,9 +167,9 @@ export default function Header() {
                             <ul>
                               {/* <li><Link to="/ProductDetails">Sewage Treatment plants</Link></li> */}
 
-                              {mainitem?.subcats?.map((subcat) => (
+                              {mainitem?.products?.map((subcat) => (
                                 <li key={subcat.id}>
-                                  <Link to={`/category/${subcat.id}`}>
+                                  <Link to={`/details/${subcat.id}`}>
                                     {subcat.name}
                                   </Link>
                                 </li>
@@ -209,9 +209,9 @@ export default function Header() {
                             <ul>
                               {/* <li><Link to="/ProductDetails">Sewage Treatment plants</Link></li> */}
 
-                              {mainitem?.subcats?.map((subcat) => (
+                              {mainitem?.products?.map((subcat) => (
                                 <li key={subcat.id}>
-                                  <Link to={`/category/${subcat.id}`}>
+                                  <Link to={`/details/${subcat.id}`}>
                                     {subcat.name}
                                   </Link>
                                 </li>

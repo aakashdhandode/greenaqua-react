@@ -11,7 +11,7 @@ function CatSlider() {
     }, []);
     const fetchProducts = () => {
         axios
-            .get('http://admin.greenaqua.in/api/ga/categories')
+            .get('http://admin.greenaqua.in/api/ga/products')
             .then((res) => {
                 console.log(res);
                 setProducts(res.data.data);
@@ -65,7 +65,7 @@ function CatSlider() {
                         <div className='home-cat-slider'>
                             <Link to={`/details/${mainproduct.id}`}>
                                 <div className='home-tab-product-card pro-height'>
-                                    <img src={'http://admin.greenaqua.in/' + mainproduct.images?.original} alt='greenAqua' />
+                                    <img src={'http://admin.greenaqua.in/' + mainproduct.featured?.original} alt='greenAqua' />
                                     <h3>{mainproduct.name}</h3>
                                 </div>
                             </Link>
