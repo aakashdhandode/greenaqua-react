@@ -41,7 +41,7 @@ export default function Gallery() {
                             <div className="zoom-effect-container">
                                 <div className="image-card">
                                     {/* <img src="https://superdevresources.com/wp-content/uploads/2014/12/lions.jpg" /> */}
-                                    <img src={'/'+image.thumb} alt='greenAqua' />
+                                    <img src={'http://admin.greenaqua.in/'+image.thumb} alt='greenAqua' />
                                 </div>
                             </div>
                         </Col>

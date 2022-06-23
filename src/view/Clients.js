@@ -39,13 +39,13 @@ export default function Clients() {
                {gallery.map((image) => (
                  <Col sm={2} xs={6}>
                      <div className='clentslogo-card' key={image.id}>
-                     <img src={'/'+image.original} alt='greenAqua' />
+                     <img src={'http://admin.greenaqua.in/'+image.original} alt='greenAqua' />
                       </div>
                    </Col>
                    ))}
                    {/* {gallery.map((image) => (
                      <div key={image.id}>
-                            <img src={'/'+image.original} alt='greenAqua' />
+                            <img src={'http://admin.greenaqua.in/'+image.original} alt='greenAqua' />
                       </div> */}
                       
 

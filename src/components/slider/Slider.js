@@ -35,7 +35,7 @@ export default function Banner() {
           {banner.map((banner) => (
             <div className="banner-slider" key={banner.id}>
               <div className="banner-img">
-                <img src={'/' + banner.images.original} alt='greenAqua' />
+                <img src={'http://admin.greenaqua.in/' + banner.images.original} alt='greenAqua' />
               </div>
             </div>
           ))}

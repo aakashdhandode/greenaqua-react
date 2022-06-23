@@ -41,7 +41,7 @@ export default function Products() {
               <Col sm={3} key={mainproduct.id}>
                 <Link to={`/category/${mainproduct.id}`}>
                   <div className='home-tab-product-card pro-height'>
-                    <img src={'/' + mainproduct.images.original} alt='greenAqua' />
+                    <img src={'http://admin.greenaqua.in/' + mainproduct.images.original} alt='greenAqua' />
                     <h3>{mainproduct.name}</h3>
                   </div>
                 </Link>

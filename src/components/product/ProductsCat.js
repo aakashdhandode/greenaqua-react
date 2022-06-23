@@ -67,7 +67,7 @@ function ProductsCat() {
           <div className='home-cat-slider'>
             <Link to={`/category/${mainproduct.id}`}>
               <div className='home-tab-product-card pro-height'>
-                <img src={'/' + mainproduct.images.original} alt='g' />
+                <img src={'http://admin.greenaqua.in/' + mainproduct.images.original} alt='g' />
                 <h3>{mainproduct.name}</h3>
               </div>
             </Link>

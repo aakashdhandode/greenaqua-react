@@ -41,7 +41,7 @@ export default function ProductsCategories() {
               <Col sm={3} key={mainproduct.id}>
                 <div className='home-tab-product-card'>
                 <Link to={`/details/${mainproduct.id}`}>
-                  <img src={'/' + mainproduct.featured.original} alt='greenAqua' />
+                  <img src={'http://admin.greenaqua.in/' + mainproduct.featured.original} alt='greenAqua' />
                   <h3>{mainproduct.name}</h3>
                   <p>{mainproduct.description}</p>
                   <Link to={`/details/${mainproduct.id}`}>More..</Link>
