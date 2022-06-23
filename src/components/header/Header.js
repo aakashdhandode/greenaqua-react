@@ -196,7 +196,7 @@ export default function Header() {
               <Nav.Item>
                 <ul className="dropdown">
                   <li>
-                    <Nav.Link eventKey="products" as={Link} to="/categories">
+                    <Nav.Link eventKey="products" as={Link} to="/services">
                       Services
                     </Nav.Link>
                     <ul className="dropdown-chaild">

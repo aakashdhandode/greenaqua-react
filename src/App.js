@@ -6,6 +6,7 @@ import Footer from './components/footer/Footer';
 import Home from './view/Home';
 import About from './view/About';
 import Services from './view/Services';
+import Service from './view/Service';
 import Gallery from './view/Gallery';
 import Contact from './view/Contact';
 import Clients from './view/Clients';
@@ -28,10 +29,10 @@ class App extends Component {
             <Switch>
               <Route exact path="/" component={Home}/>
               <Route path="/About" component={About} />
-              <Route path="/Services" component={Services} />
               <Route path="/Clients" component={Clients} />
               <Route path="/Gallery" component={Gallery} />
               <Route exact path="/categories" component={Products} />
+              <Route exact path="/services" component={Service} />
               <Route exact path="/category/:id"  component={ProductsCategories} />
               <Route path="/details/:id" component={Details} />
               <Route path="/Downloads" component={Downloads} />

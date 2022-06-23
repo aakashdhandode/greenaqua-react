@@ -127,8 +127,8 @@ class ApplyJob extends Component {
         formData.append("message", this.state.message);
 
         const res = await axios.post('http://admin.greenaqua.in/api/ga/career/apply', this.state);
-        if (res.data.sttus === 200) {
-            console.log(res.data.message)
+        if (res.data.success) {
+            alert(res.data.message)
             this.setState({
                 career_id: '',
                 name: '',
@@ -138,6 +138,8 @@ class ApplyJob extends Component {
                 message: '',
                 
             });
+        }else{
+            alert(res.data.message)
         }
     }
     render() {

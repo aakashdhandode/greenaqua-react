@@ -185,7 +185,7 @@ export default function Footer() {
                </div>
                {/* email */}
                <div className="follow-instagram">
-                  <a href="mailto: contact@greenaqua.in" title="Contact Us On instagram" target="_blank"> <i className="fa fa-envelope"></i></a>
+                  <a href="mailto:contact@greenaqua.in" title="Contact Us On instagram" target="_blank"> <i className="fa fa-envelope"></i></a>
                </div>
             </div>
          </div>
